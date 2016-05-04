@@ -52,5 +52,8 @@ source 'https://rubygems.org' do
     gem 'heroku-deflater'
     gem 'rack-timeout', '~> 0.4.2'
   end
+
+  gem 'activeadmin', github: 'activeadmin'
+  gem 'devise', '~> 4.1.0'
 end
 
