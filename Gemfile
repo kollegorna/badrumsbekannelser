@@ -49,6 +49,7 @@ source 'https://rubygems.org' do
   group :production do
     gem 'rails_12factor'
     gem 'heroku-deflater'
+    gem 'rack-timeout', '~> 0.4.2'
   end
 end
 
