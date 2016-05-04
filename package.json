@@ -1,0 +1,19 @@
+{
+  "name": "badrumsbikten",
+  "version": "1.0.0",
+  "author": "Kollegorna AB",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kollegorna/badrumsbikten.git"
+  },
+  "dependencies": {
+    "bower": "1.7.x"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": "4.2.x"
+  }
+}
