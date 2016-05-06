@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  actions :index, :show, :edit, :create, :update
+  actions :index, :new, :show, :edit, :create, :update
 
   filter :family
   filter :first_name
@@ -37,7 +37,11 @@ ActiveAdmin.register User do
 
   form do |f|
     f.inputs 'User' do
-      f.input :family
+      if f.object.new_record?
+        f.input :family, hint: "Family not in the list? Add one #{link_to 'here',  new_admin_family_path}.".html_safe
+      else
+        f.input :family, include_blank: false
+      end
       f.input :first_name
       f.input :last_name
       f.input :email, required: true

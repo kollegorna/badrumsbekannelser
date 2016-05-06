@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   belongs_to :family, counter_cache: true
 
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :family, presence: true
 
   def to_s
     name
