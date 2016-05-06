@@ -55,7 +55,7 @@ source 'https://rubygems.org' do
     gem 'rack-timeout', '~> 0.4.2'
   end
 
-  gem 'activeadmin', github: 'activeadmin'
+  gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
   gem 'devise', '~> 4.1.0'
 end
 
