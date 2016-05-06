@@ -1,19 +1,22 @@
 ActiveAdmin.register User do
   filter :email
+  filter :family
   filter :created_at
   filter :updated_at
 
-  permit_params :email, :password
+  permit_params :email, :password, :family_id
 
-  index do |user|
+  index do
     id_column
 
     column :email
     column :created_at
     column :updated_at
+
+    actions
   end
 
-  show do |user|
+  show do
     attributes_table do
       row :id
       row :email
@@ -26,6 +29,7 @@ ActiveAdmin.register User do
     f.semantic_errors(*f.object.errors.keys)
 
     f.inputs 'User' do
+      f.input :family
       f.input :email, required: true
 
       if f.object.new_record?
