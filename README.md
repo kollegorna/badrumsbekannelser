@@ -1,3 +1,6 @@
+[ ![Codeship Status for kollegorna/badrumsbikten](https://codeship.com/projects/cd6f0060-f3de-0133-65b3-7686dce9455d/status?branch=master)](https://codeship.com/projects/149894)
+[![Code Climate](https://codeclimate.com/repos/572c33ad5d6d1f007c005420/badges/6c85b7357fed98bd9d7d/gpa.svg)](https://codeclimate.com/repos/572c33ad5d6d1f007c005420/feed)
+
 ## Environments
 
 #### Production:
