@@ -11,4 +11,14 @@ ActiveAdmin.register Family do
 
     actions
   end
+
+  show do
+    attributes_table do
+      row :id
+      row :name
+      row :created_at
+      row :updated_at
+      row :users_count
+    end
+  end
 end

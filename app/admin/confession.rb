@@ -1,9 +1,11 @@
 ActiveAdmin.register Confession do
-  actions :index, :show, :edit
+  actions :index, :show, :edit, :update
 
   filter :body
   filter :featured
   filter :created_at
+
+  permit_params :featured, comment_attributes: [:id, :title, :body, :_destroy]
 
   index do
     id_column
@@ -31,6 +33,24 @@ ActiveAdmin.register Confession do
       f.input :body, input_html: { disabled: true }
       f.input :featured
     end
+
+    f.inputs 'Comment', for: [:comment, f.object.comment || Comment.new] do |c|
+      c.input :title
+      c.input :body
+
+      c.input :_destroy, as: :boolean, label: 'Remove' unless c.object.new_record?
+    end
+
     f.actions
+  end
+
+  controller do
+    def update
+      params[:confession].delete(:comment_attributes) if
+        params[:confession][:comment_attributes][:title].blank? &&
+        params[:confession][:comment_attributes][:title].blank?
+
+      super
+    end
   end
 end
