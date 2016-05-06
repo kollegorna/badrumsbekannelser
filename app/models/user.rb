@@ -6,7 +6,13 @@ class User < ActiveRecord::Base
 
   belongs_to :family, counter_cache: true
 
+  validates :first_name, :last_name, presence: true
+
   def to_s
-    email
+    name
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 end
