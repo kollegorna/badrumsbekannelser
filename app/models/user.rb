@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :family, counter_cache: true
+
+  def to_s
+    email
+  end
 end
