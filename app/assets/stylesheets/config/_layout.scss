@@ -1,12 +1,12 @@
 // -----------------------------------------------------------------------------
-// Libraries
+// Directions
 // -----------------------------------------------------------------------------
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require jquery.turbolinks
-//= require js-cookie
+
+$ds-float: left !default;
+$ds-float-opposite: right !default;
+$ds-text-direction: ltr !default;
+
 // -----------------------------------------------------------------------------
-// Application
+// Breakpoints
 // -----------------------------------------------------------------------------
-//= require app/init
+
