@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// Forms
+// -----------------------------------------------------------------------------
+
+fieldset {
+  border-color:  $ds-color-border;
+  margin-bottom: $ds-type-margin;
+}
+
+legend {
+  padding: 0 $ds-type-margin;
+}
+
+label {
+  font-size: $ds-h5-font-size;
+  display: block;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid $ds-color-input-border;
+  border-radius: rem(8);
+  background: $ds-color-input;
+  color: $ds-color-input-text;
+  font-family: inherit;
+  font-size: $ds-h5-font-size;
+  margin: 0 0 $ds-type-margin;
+  max-width: 100%;
+  width: 100%;
+  // @TODO: fix this rem
+  padding: 0.51rem rem(16);
+  outline: none;
+
+  &:focus {
+    border-color: color("blue");
+  }
+}
+
+input[disabled="disabled"] {
+  background: color("gray-10");
+}
+
+// Checkboxes and radiobuttons
+// We use placeholders for this. If using for example input[type="checkbox"]
+// we'd be getting in trouble with specificity.
+%input-checkbox,
+%input-radio {
+  border: 0;
+  max-width: auto;
+  width: auto;
+
+  & + label {
+    display: inline-block;
+    margin: 0 0 $ds-type-margin;
+    padding-left: rem(6);
+    padding-right: rem(20);
+  }
+}
+
+button {
+  background: $ds-color-button;
+  border: 0;
+  color: $ds-color-button-text;
+  cursor: pointer;
+  overflow: hidden;
+  width: auto;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+optgroup {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: $ds-font-weight-bold;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder, // Firefox 18-
+::-moz-placeholder, // Firefox 19+
+:-ms-input-placeholder {
+  color: lighten($ds-color-input-text, 20);
+}

@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
-  <title>Badrumsbikten</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>
+    <%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>
+  </title>
+
+  <meta name="description" content="<%= yield(:description).presence || "@TODO" %>">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>">
+  <meta property="og:url" content="<%= request.original_url %>">
+  <meta property="og:description" content="<%= yield(:description).presence || "@TODO" %>">
+  <meta property="og:image" content="<%= image_url "social/facebook_og.png" %>">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Badrumsbikten">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>">
+  <meta name="twitter:description" content="<%= yield(:description).presence || "@TODO" %>">
+  <meta name="twitter:image" content="<%= image_url "social/twitter_card.png" %>">
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <script data-turbolinks-track="true">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', '<%= Rails.application.secrets.google_analytics_id %>', 'auto');
+    ga('require', 'displayfeatures');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  </script>
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
