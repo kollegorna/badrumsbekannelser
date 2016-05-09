@@ -33,5 +33,5 @@ https://codeship.com/projects/149894
 #### How to copy production data to your local database:
 
 1. ``heroku pg:backups capture --app badrumsbikten``
-2. ``curl -o latest.dump $(heroku pg:backups public-url --app vembi)``
+2. ``curl -o latest.dump $(heroku pg:backups public-url --app badrumsbikten)``
 3. ``pg_restore --verbose --clean --no-acl --no-owner -h localhost -d badrumsbikten_development latest.dump``
