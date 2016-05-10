@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
+  resources :confessions, only: [:index, :new, :edit, :create, :update, :destroy]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :family, counter_cache: true
+  has_many :confessions
 
   validates :first_name, :last_name, :family, presence: true
 
