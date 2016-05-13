@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Confessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Body</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @confessions.each do |confession| %>
+      <tr>
+        <td><%= confession.user.name %></td>
+        <td><%= simple_format confession.body %></td>
+        <td></td>
+        <td>
+          <%= link_to 'Edit', edit_confession_path(confession) %> |
+          <%= link_to 'Destroy', confession, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Confession', new_confession_path %>
