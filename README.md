@@ -35,3 +35,22 @@ https://codeship.com/projects/149894
 1. ``heroku pg:backups capture --app badrumsbikten``
 2. ``curl -o latest.dump $(heroku pg:backups public-url --app badrumsbikten)``
 3. ``pg_restore --verbose --clean --no-acl --no-owner -h localhost -d badrumsbikten_development latest.dump``
+
+## Raspberry Pi setup
+
+### Prerequisites
+
+Use NOOBS with Raspbian.
+
+### First time setup
+
+After configuring the wifi make sure the OS is setup with the following
+
+1. Connect to WIFI by clicking the icon in the top right corner of the menu bar.
+2. Auto hide menu bar. Right click and select "Panel Settings". Go to the "Advanced" tab and check the box under "Automatic hiding".
+
+### Running it
+
+1. Open the Terminal and run…
+2. `$ epiphany-browser -a --profile ~/.config https://badrumsbikten.herokuapp.com/confessions/[SLUG]`
+
