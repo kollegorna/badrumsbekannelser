@@ -7,8 +7,6 @@
 
   .cell {
     position: relative;
-    width: percentage(1/7);
-    padding-bottom: percentage(1/7);
     float: left;
     text-align: center;
     color: color("white");
@@ -24,8 +22,47 @@
       @include transform(translate(-50%, -50%));
     }
 
+    &.blank {
+      display: none;
+
+      @include media($desktop) {
+        display: block;
+        width: percentage(1/7);
+        padding-bottom: percentage(1/7);
+      }
+    }
+
     &.empty {
       background: color("light-green");
+      width: 20%;
+      padding-bottom: 50%;
+
+      @include media($tablet) {
+          width: 10%;
+          padding-bottom: 30%;
+      }
+
+      @include media($desktop) {
+        width: percentage(1/7);
+        padding-bottom: percentage(1/7);
+      }
+    }
+
+    &.link,
+    &.photo,
+    &.confession {
+      width: 80%;
+      padding-bottom: 50%;
+
+      @include media($tablet) {
+          width: 40%;
+          padding-bottom: 30%;
+      }
+
+      @include media($desktop) {
+        width: percentage(1/7);
+        padding-bottom: percentage(1/7);
+      }
     }
 
     &.confession {
@@ -37,7 +74,17 @@
     }
 
     &.headline {
-      width: percentage(3/7);
+      width: 100%;
+      padding-bottom: 50%;
+
+      @include media($tablet) {
+          padding-bottom: 30%;
+      }
+
+      @include media($desktop) {
+        width: percentage(3/7);
+        padding-bottom: percentage(1/7);
+      }
     }
   }
 }
