@@ -10,4 +10,5 @@
 // Application
 // -----------------------------------------------------------------------------
 //= require app/init
+//= require app/navigation
 //= require app/analytics

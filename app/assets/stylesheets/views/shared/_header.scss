@@ -1,10 +1,13 @@
 .header {
   width: 100%;
   padding: 20px;
+  position: relative;
+  z-index: $ds-tooltips;
 
   .logo {
     width: 50%;
     float: left;
+    @include transition(opacity 0.5s ease-out);
 
     img {
       width: auto;
@@ -14,15 +17,48 @@
 
   .menu-toggle {
     width: 50%;
+    height: 45px;
     float: right;
-    text-align: right;
+    padding-right: 50px;
     color: color("green");
-    font-family: $ds-font-family-complementary;
+    position: relative;
+
+    .icon {
+      cursor: pointer;
+      font-size: rem(20);
+      text-align: right;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include transform(translate(0, -50%));
+
+      .hamburger {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+      .text {
+        line-height: rem(38);
+        display: inline-block;
+        vertical-align: middle;
+        color: color("green");
+        @include transition(color 0.5s ease-out);
+      }
+    }
   }
 
   &:after {
     content: "";
     display: block;
     clear: both;
+  }
+}
+
+body.open-menu {
+  .header {
+    .logo { opacity: 0; }
+    .menu-toggle {
+      .text { color: color("white"); }
+    }
   }
 }
