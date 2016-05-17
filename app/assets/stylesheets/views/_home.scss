@@ -6,9 +6,23 @@
   width: 100%;
 
   .cell {
+    position: relative;
     width: percentage(1/7);
     padding-bottom: percentage(1/7);
     float: left;
+    text-align: center;
+    color: color("white");
+    font-size: rem(20);
+    line-height: 1.2;
+    font-weight: 400;
+
+    .content {
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      @include transform(translate(-50%, -50%));
+    }
 
     &.empty {
       background: color("light-green");
