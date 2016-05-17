@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// Views > Home
+// -----------------------------------------------------------------------------
+
+.grid {
+  width: 100%;
+
+  .cell {
+    width: percentage(1/7);
+    padding-bottom: percentage(1/7);
+    float: left;
+
+    &.empty {
+      background: color("light-green");
+    }
+
+    &.confession {
+      background: color("green");
+    }
+
+    &.link {
+      background: color("orange");
+    }
+
+    &.headline {
+      width: percentage(3/7);
+    }
+  }
+}
