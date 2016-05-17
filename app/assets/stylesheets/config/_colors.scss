@@ -3,31 +3,26 @@
 // -----------------------------------------------------------------------------
 
 // COLOR MAP
-// Allows colors to be stored together in a neat
-// array — opens up cool new possibilities, so
-// let me have this one, people :)
+// Allows colors to be stored together in a neat array
 $ds-colors: (
-  "blue":             blue,
-  "green":            green,
-  "yellow":           yellow,
+  "green":            #49A64D,
+  "light-green":      #EBF1EA,
+  "orange":           #E78321,
+  "gray":             #EFEEEC,
+  "dark-gray":        #31302E,
 
   // Complementary colors
-  "orange":           orange,
   "red":              red,
-  "ruby":             #E6175A,
-  "violet":           #B93C96,
-  "purple":           pruple,
-  "majorelle-blue":   #4E4EE5,
-  "turquoise":        #34D6D6,
-  "mountain-meadow":  #39C686,
+  "purple":           purple,
+  "blue":             blue,
 
   "white":            white,
   "black":            black,
-  "gray-10":          #F5F5F5, // light
+  "gray-10":          #EFEEEC, // light
   "gray-20":          #E4E4E4, // medium
   "gray-30":          #BCBCBC, // medium-dark
   "gray-40":          #B2B2B2, // gray
-  "gray-80":          #565656  // dark-gray
+  "gray-80":          #31302E  // dark-gray
 );
 
 // COLOR FUNCTION
@@ -61,17 +56,17 @@ $ds-colors: (
 
 $ds-color-background:         color("white");
 $ds-color-box-shadow:         color("black");
-$ds-color-text:               color("gray-80");
+$ds-color-text:               color("black");
 $ds-color-text-light:         color("gray-40");
-$ds-color-link:               color("gray-40");
-$ds-color-heading:            color("gray-80");
-$ds-color-selection:          color("blue");
-$ds-color-selection-text:     color("gray-80");
+$ds-color-link:               color("green");
+$ds-color-heading:            color("green");
+$ds-color-selection:          color("green");
+$ds-color-selection-text:     color("white");
 $ds-color-input:              color("white");
 $ds-color-input-border:       color("gray-20");
 $ds-color-input-text:         color("gray-80");
 $ds-color-button:             color("white");
-$ds-color-button-text:        color("gray-80");
-$ds-color-button--hover:      color("white");
-$ds-color-button-text--hover: color("gray-80");
-$ds-color-border:             color("gray-20");
+$ds-color-button-text:        color("white");
+$ds-color-button--hover:      color("green");
+$ds-color-button-text--hover: color("green");
+$ds-color-border:             color("light-green");

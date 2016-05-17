@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  padding: 20px;
+
+  .logo {
+    width: 50%;
+    float: left;
+
+    img {
+      width: auto;
+      height: 45px;
+    }
+  }
+
+  .menu-toggle {
+    width: 50%;
+    float: right;
+    text-align: right;
+    color: color("green");
+    font-family: $ds-font-family-complementary;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
