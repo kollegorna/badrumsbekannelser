@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'dev-confessions' => 'pages#dev_mirrors'
+  get 'dev-mirrors' => 'pages#dev_mirrors'
 
   resources :confessions, only: [:index, :new, :edit, :create, :update, :destroy]
 
