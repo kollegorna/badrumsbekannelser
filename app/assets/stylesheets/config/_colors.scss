@@ -5,10 +5,11 @@
 // COLOR MAP
 // Allows colors to be stored together in a neat array
 $ds-colors: (
-  "green":            #49a64d,
-  "light-green":      #ebf1ea,
-  "orange":           #fc9f3b,
-  "gray":             #efeeec,
+  "green":            #49A64D,
+  "light-green":      #EBF1EA,
+  "orange":           #E78321,
+  "gray":             #EFEEEC,
+  "dark-gray":        #31302E,
 
   // Complementary colors
   "red":              red,
@@ -17,11 +18,11 @@ $ds-colors: (
 
   "white":            white,
   "black":            black,
-  "gray-10":          #F5F5F5, // light
+  "gray-10":          #EFEEEC, // light
   "gray-20":          #E4E4E4, // medium
   "gray-30":          #BCBCBC, // medium-dark
   "gray-40":          #B2B2B2, // gray
-  "gray-80":          #565656  // dark-gray
+  "gray-80":          #31302E  // dark-gray
 );
 
 // COLOR FUNCTION
