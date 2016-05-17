@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>
-    <%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>
+    <%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelsen' : 'Badrumsbekännelsen' %>
   </title>
 
   <meta name="description" content="<%= yield(:description).presence || "@TODO" %>">
@@ -14,16 +14,16 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>">
+  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelsen' : 'Badrumsbekännelsen' %>">
   <meta property="og:url" content="<%= request.original_url %>">
   <meta property="og:description" content="<%= yield(:description).presence || "@TODO" %>">
   <meta property="og:image" content="<%= image_url "social/facebook_og.png" %>">
   <meta property="og:locale" content="sv_SE">
-  <meta property="og:site_name" content="Badrumsbikten">
+  <meta property="og:site_name" content="Badrumsbekännelsen">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbikten' : 'Badrumsbikten' %>">
+  <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelsen' : 'Badrumsbekännelsen' %>">
   <meta name="twitter:description" content="<%= yield(:description).presence || "@TODO" %>">
   <meta name="twitter:image" content="<%= image_url "social/twitter_card.png" %>">
 
