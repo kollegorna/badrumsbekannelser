@@ -7,6 +7,13 @@ Rails.application.routes.draw do
 
   get 'dev-mirrors' => 'pages#dev_mirrors'
 
+  get 'dev-home' => 'pages#dev_home'
+  get 'dev-about' => 'pages#dev_about'
+  get 'dev-about-mirrors' => 'pages#dev_about_mirrors'
+  get 'dev-psychologist' => 'pages#dev_psychologist'
+  get 'dev-confessions' => 'pages#dev_confessions'
+  get 'dev-confession' => 'pages#dev_confession'
+
   resources :confessions, only: [:index, :new, :edit, :create, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
