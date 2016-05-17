@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def home
   end
 
-  def dev_confessions
-    render layout: "confessions"
+  def dev_mirrors
+    render layout: "mirrors"
   end
 
   def dev_home
