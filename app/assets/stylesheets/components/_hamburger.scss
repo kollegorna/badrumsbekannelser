@@ -1,0 +1,12 @@
+.hamburger {
+  @include burger(38px, 4px, 7px, color("green"));
+  border-radius: 4px;
+  &:before, &:after { border-radius: 4px; }
+}
+
+body.open-menu {
+  .hamburger {
+    @include burger(38px, 4px, 7px, color("white"));
+    @include burger-to-cross;
+  }
+}

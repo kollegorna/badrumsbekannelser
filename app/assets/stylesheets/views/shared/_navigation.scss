@@ -1,0 +1,39 @@
+.navigation {
+  display: none;
+  background: rgba(color("green"), 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $ds-navigation;
+
+  text-align: center;
+  color: color("white");
+
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      font-size: rem(48);
+      line-height: 1.2;
+
+      &.current {
+        text-decoration: line-through;
+      }
+
+      &:last-child {
+        margin-top: 40px;
+      }
+    }
+  }
+}
