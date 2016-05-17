@@ -18,7 +18,7 @@
       position:absolute;
       top: 50%;
       left: 50%;
-      width: 90%;
+      width: 80%;
       @include transform(translate(-50%, -50%));
     }
 
@@ -66,11 +66,19 @@
     }
 
     &.confession {
+      font-size: rem(20);
       background: color("green");
     }
 
     &.link {
+      font-size: rem(32);
+      line-height: 1.1;
       background: color("orange");
+    }
+
+    &.photo {
+      background: no-repeat center center;
+      background-size: cover;
     }
 
     &.headline {
