@@ -13,6 +13,7 @@
 
   ul {
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     @include transform(translate(-50%, -50%));
@@ -23,9 +24,15 @@
     li {
       margin: 0;
       padding: 0;
+      font-size: rem(24);
 
-      font-size: rem(48);
-      line-height: 1.2;
+      @include media($tablet) {
+        font-size: rem(30);
+      }
+      @include media($laptop) {
+        font-size: rem(48);
+        line-height: 1.2;
+      }
 
       &.current {
         text-decoration: line-through;
