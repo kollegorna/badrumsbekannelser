@@ -103,6 +103,7 @@ GEM
       activesupport (>= 3.2, < 5)
     heroku-deflater (0.6.2)
       rack (>= 1.4.5)
+    honeybadger (2.6.0)
     i18n (0.7.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
@@ -256,13 +257,14 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  autoprefixer-rails!
+  autoprefixer-rails (~> 6.3.6)!
   better_errors!
   byebug!
   coffee-rails (~> 4.1.0)!
   devise (~> 4.1.0)!
   faker (~> 1.6.3)!
   heroku-deflater!
+  honeybadger (~> 2.6.0)!
   inline_svg!
   jbuilder (~> 2.0)!
   jquery-rails!

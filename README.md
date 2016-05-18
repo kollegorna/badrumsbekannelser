@@ -47,8 +47,9 @@ After configuring the wifi make sure the OS is setup with the following
 
 1. Connect to WIFI by clicking the icon in the top right corner of the menu bar.
 2. Auto hide menu bar. Right click and select "Panel Settings". Go to the "Advanced" tab and check the box under "Automatic hiding".
+3. @TODO more…
 
 ### Running it
 
 1. Open the Terminal and run…
-2. `$ epiphany-browser -a --profile ~/.config https://badrumsbekannelser.herokuapp.com/confessions/[SLUG]`
+2. `$ epiphany-browser -a --profile ~/.config http://badrumsbekannelser.herokuapp.com/families/e4a5249e-e433-4116-8348-ef499d7b4db5/mirror`
