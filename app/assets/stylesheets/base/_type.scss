@@ -110,10 +110,12 @@ blockquote,
 ol,
 ul,
 dl {
+  font-weight: $ds-font-weight;
   font-size: $ds-font-size-body-copy;
 }
 
 p {
+  font-family: $ds-font-family-complementary;
   margin: 0 0 $ds-type-margin;
 }
 

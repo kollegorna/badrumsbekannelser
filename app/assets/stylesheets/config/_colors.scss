@@ -16,13 +16,19 @@ $ds-colors: (
   "purple":           purple,
   "blue":             blue,
 
+  // Neutral colors
   "white":            white,
   "black":            black,
-  "gray-10":          #EFEEEC, // light
-  "gray-20":          #E4E4E4, // medium
-  "gray-30":          #BCBCBC, // medium-dark
-  "gray-40":          #B2B2B2, // gray
-  "gray-80":          #31302E  // dark-gray
+  "gray-10":          #EFEEEC,
+  "gray-20":          #E4E4E4,
+  "gray-30":          #BCBCBC,
+  "gray-40":          #B2B2B2,
+  "gray-60":          #333333,
+  "gray-80":          #31302E,
+
+  // Brand colors
+  "facebook":         #385A98,
+  "twitter":          #2AA4F0
 );
 
 // COLOR FUNCTION
