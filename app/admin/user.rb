@@ -10,6 +10,8 @@ ActiveAdmin.register User do
 
   permit_params :email, :password, :family_id, :first_name, :last_name
 
+  config.sort_order = 'created_at_desc'
+
   index do
     id_column
 

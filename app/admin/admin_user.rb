@@ -1,4 +1,6 @@
 ActiveAdmin.register AdminUser do
+  config.sort_order = 'created_at_desc'
+
   permit_params :email, :password, :password_confirmation
 
   index do

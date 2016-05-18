@@ -1,6 +1,8 @@
 ActiveAdmin.register Family do
   permit_params :name
 
+  config.sort_order = 'created_at_desc'
+
   index do
     id_column
 

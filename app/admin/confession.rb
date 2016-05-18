@@ -7,6 +7,8 @@ ActiveAdmin.register Confession do
 
   permit_params :featured, comment_attributes: [:id, :title, :body, :_destroy]
 
+  config.sort_order = 'created_at_desc'
+
   index do
     id_column
 
