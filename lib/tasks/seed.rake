@@ -29,7 +29,7 @@ namespace :badrumsbekannelsen do
       5.times do
         confession = Confession.find(confession_ids.shuffle.first)
 
-        confession.create_comment!(
+        confession.build_comment(
           title: Faker::Lorem.sentence,
           body: Faker::Lorem.paragraph
         )
