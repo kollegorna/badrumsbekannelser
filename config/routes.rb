@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   get 'about',         to: 'pages#about',         as: 'about_page'
   get 'about-mirrors', to: 'pages#about_mirrors', as: 'about_mirrors_page'
   get 'psychologist',  to: 'pages#psychologist',  as: 'psychologist_page'
-  get 'mirrors',       to: 'pages#mirrors'
 
   # Resources
 

@@ -1,2 +1,5 @@
-<h1>Families#mirror</h1>
-<p>Find me in app/views/families/mirror.html.erb</p>
+<div class="mirror">
+  <% @confessions.each do |confession| %>
+    <%= simple_format confession.body %>
+  <% end %>
+</div>

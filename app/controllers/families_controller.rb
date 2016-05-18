@@ -1,10 +1,10 @@
 class FamiliesController < ApplicationController
   before_action :set_family
 
-  layout :mirrors
+  layout 'mirrors'
 
   def mirror
-
+    @confessions = @family.confessions.order(created_at: :desc)
   end
 
   private
