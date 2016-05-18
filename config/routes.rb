@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   # Static pages
 
-  get 'about',         to: 'pages#about',         as: 'pages_about'
-  get 'about-mirrors', to: 'pages#about_mirrors', as: 'pages_about_mirrors'
-  get 'psychologist',  to: 'pages#psychologist',  as: 'pages_psychologist'
+  get 'about',         to: 'pages#about',         as: 'about_page'
+  get 'about-mirrors', to: 'pages#about_mirrors', as: 'about_mirrors_page'
+  get 'psychologist',  to: 'pages#psychologist',  as: 'psychologist_page'
   get 'mirrors',       to: 'pages#mirrors'
 
   # Resources
@@ -19,9 +19,7 @@ Rails.application.routes.draw do
   resources :confessions, only: [:index, :new, :show, :edit, :create]
 
   resources :families, only: [] do
-    member do
-      get 'mirror'
-    end
+    get 'mirror', on: :member
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
