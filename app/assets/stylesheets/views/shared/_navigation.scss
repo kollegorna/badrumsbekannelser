@@ -34,6 +34,16 @@
         line-height: 1.2;
       }
 
+      a,
+      a:active,
+      a:visited {
+        color: color("white");
+      }
+
+      a:hover {
+        color: color("light-green");
+      }
+
       &.current {
         text-decoration: line-through;
       }
