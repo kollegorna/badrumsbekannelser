@@ -24,11 +24,11 @@
   <div class="cell empty"></div>
 
   <% # Row 2 %>
-  <div class="cell link">
+  <%= link_to about_page_path, :class => "cell link" do %>
     <div class="content">
       Om projektet
     </div>
-  </div>
+  <% end %>
 
   <div class="cell empty"></div>
 
@@ -58,12 +58,14 @@
 
   <div class="cell empty"></div>
 
-  <div class="cell action">
+  <a href="#" class="cell action open-video">
     <div class="content">
-      <div class="play"></div>
-      <h2>Se filmen!</h2>
+        <div class="play">
+          <%= inline_svg "icons/play.svg" %>
+        </div>
+        <h2>Se filmen!</h2>
     </div>
-  </div>
+  </a>
 
   <div class="cell empty"></div>
   <div class="cell blank"></div>
@@ -74,11 +76,11 @@
   <div class="cell empty"></div>
   <div class="cell blank"></div>
 
-  <div class="cell link">
+  <%= link_to about_mirrors_page_path, :class => "cell link" do %>
     <div class="content">
       Så fungerar speglarna
     </div>
-  </div>
+  <% end %>
 
   <div class="cell empty"></div>
   <div class="cell blank"></div>

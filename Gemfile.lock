@@ -109,6 +109,10 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
+    inline_svg (0.6.4)
+      activesupport (>= 4.0.4)
+      loofah (>= 2.0)
+      nokogiri (~> 1.6)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -254,12 +258,12 @@ DEPENDENCIES
   activeadmin!
   autoprefixer-rails!
   better_errors!
-  bourbon!
   byebug!
   coffee-rails (~> 4.1.0)!
   devise (~> 4.1.0)!
   faker (~> 1.6.3)!
   heroku-deflater!
+  inline_svg!
   jbuilder (~> 2.0)!
   jquery-rails!
   jquery-turbolinks!

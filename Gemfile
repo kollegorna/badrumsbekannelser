@@ -63,6 +63,6 @@ source 'https://rubygems.org' do
   gem 'devise', '~> 4.1.0'
 
   gem 'normalize-rails', '~> 3.0.3'
-  gem 'bourbon'
+  gem 'inline_svg'
   gem 'autoprefixer-rails'
 end
