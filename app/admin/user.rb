@@ -33,6 +33,15 @@ ActiveAdmin.register User do
       row :created_at
       row :updated_at
     end
+
+    panel 'Confessions' do
+      table_for user.confessions do
+        column(:id) { |confession| link_to confession.id, admin_confession_path(confession) }
+        column(:body) { |confession| simple_format confession.body }
+        column :created_at
+        column :updated_at
+      end
+    end
   end
 
   form do |f|

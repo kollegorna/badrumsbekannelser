@@ -20,5 +20,16 @@ ActiveAdmin.register Family do
       row :updated_at
       row :users_count
     end
+
+    panel 'Members' do
+      table_for family.users do
+        column(:id) { |user| link_to user.id, admin_user_path(user) }
+        column :first_name
+        column :last_name
+        column :email
+        column :created_at
+        column :updated_at
+      end
+    end
   end
 end
