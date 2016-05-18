@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// Views > About
+// -----------------------------------------------------------------------------
+
+.about {
+  background: color("light-green");
+
+  &__container {
+    @extend .container;
+
+    @include media($tablet) {
+      margin-top: 20px;
+    }
+
+    @include media($laptop) {
+      margin-top: 60px;
+    }
+  }
+
+  &__hero {
+    @extend .hero;
+  }
+
+  &__sidebar {
+    @extend .sidebar;
+
+    .share {
+      display: block;
+      font-size: rem(20);
+    }
+  }
+
+  &__main {
+    @extend .main;
+
+    p {
+      color: color("gray-60");
+    }
+  }
+}
