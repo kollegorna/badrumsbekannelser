@@ -2,11 +2,17 @@
 // Views
 // -----------------------------------------------------------------------------
 
-@import 'shared/header';
-@import 'shared/navigation';
-@import 'shared/video_overlay';
+// --
+// Shared view styles
+// --
+@import 'shared/__shared';
 
-@import 'home';
-@import 'about';
-@import 'mirrors';
-@import 'psychologist';
+// --
+// Static Pages
+// --
+@import 'pages/__pages';
+
+// --
+// Confessions
+// --
+@import 'confessions/__confessions';

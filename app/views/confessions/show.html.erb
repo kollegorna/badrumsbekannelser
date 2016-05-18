@@ -1,1 +1,37 @@
-Bekännelse
+<% content_for :body_classes, "confession--show" %>
+
+<section class="confession--show__hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1>"<%= @confession.body %>"</h1>
+    </div>
+  </div>
+</section>
+
+<section class="confession--show__container">
+  <aside class="confession--show__sidebar">
+    <h2>Psykologen svarar</h2>
+
+    <a href="#" class="share share--facebook">Dela detta på Facebook</a>
+    <a href="#" class="share share--twitter">Twittra om detta</a>
+  </aside>
+
+  <main class="confession--show__main">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien turpis, dapibus eget dignissim id, maximus eget erat. Sed pharetra leo a mi efficitur scelerisque. Nulla facilisi. Phasellus vel arcu pellentesque, rhoncus purus auctor, convallis risus. In mollis risus turpis, non sollicitudin lacus ornare et. Nunc semper felis in nulla ornare, laoreet elementum sem cursus. Donec elit lorem, iaculis at lobortis nec, tincidunt sed nisl. Vestibulum at posuere ante. Nunc at diam eu diam eleifend lacinia. Praesent dictum eros urna, id facilisis lorem lobortis sit amet. Sed at fringilla arcu. Ut ut libero eget justo porta sodales.</p>
+
+    <p>Sed a diam eget nisl vulputate suscipit. Cras pretium vitae nisl quis maximus. Ut et libero magna. Etiam vel lacus quam. Proin porta ut odio mattis mattis. Aenean sed elit ligula. In ex metus, sodales id hendrerit in, luctus quis diam. Vivamus elit leo, scelerisque sed lectus ut, vulputate convallis neque.</p>
+
+    <p>Quisque a nibh accumsan, dapibus metus at, pulvinar dolor. Donec condimentum tortor quis eleifend tempus. Ut at semper nisi. Nunc id ex non tortor aliquet imperdiet vitae sed nunc. Vestibulum dui diam, varius nec mollis sit amet, vestibulum et orci. Donec aliquam efficitur felis. Sed et ex placerat, rutrum nulla ut, gravida justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc elementum ipsum a sapien tincidunt cursus. Etiam dapibus vitae risus iaculis sodales. Nullam turpis quam, molestie vitae finibus vitae, dictum a nibh. Sed sed felis et lacus porta vestibulum commodo quis felis. Integer non leo laoreet, tempus mauris vitae, ullamcorper magna. Nunc bibendum imperdiet porta.</p>
+
+    <div class="author">
+      <div class="author__photo" style="background-image: url('<%= image_path "face.png" %>');">
+      </div>
+      <div class="author__name">
+        <p>
+          Förnamn Efternamn, Doktor inom Psykologi<br>
+          <a href="#">Läs mer on henne hãr</a>
+        </p>
+      </div>
+    </div>
+  </main>
+</section>
