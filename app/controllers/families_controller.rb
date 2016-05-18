@@ -1,7 +1,7 @@
 class FamiliesController < ApplicationController
   before_action :set_family
 
-  layout: :mirror
+  layout :mirrors
 
   def mirror
 
