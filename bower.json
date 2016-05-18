@@ -1,5 +1,5 @@
 {
-  "name": "badrumsbekannelsen",
+  "name": "badrumsbekannelser",
   "private": true,
   "dependencies": {
     "js-cookie": "~2.0.4",
