@@ -13,6 +13,9 @@ class ConfessionsController < ApplicationController
   def edit
   end
 
+  def show
+  end
+
   def create
     @confession = current_user.confessions.new(confession_params)
 
