@@ -60,9 +60,9 @@ source 'https://rubygems.org' do
   end
 
   gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
+  gem 'autoprefixer-rails', '~> 6.3.6'
+  gem 'bourbon', '~> 4.2.7'
   gem 'devise', '~> 4.1.0'
-
+  gem 'honeybadger', '~> 2.6.0'
   gem 'normalize-rails', '~> 3.0.3'
-  gem 'bourbon'
-  gem 'autoprefixer-rails'
 end
