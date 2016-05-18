@@ -40,6 +40,7 @@ source 'https://rubygems.org' do
     gem 'byebug'
     gem 'rspec-rails', '~> 3.4.2'
     gem 'better_errors'
+    gem 'faker', '~> 1.6.3'
   end
 
   group :development do
@@ -65,4 +66,3 @@ source 'https://rubygems.org' do
   gem 'bourbon'
   gem 'autoprefixer-rails'
 end
-
