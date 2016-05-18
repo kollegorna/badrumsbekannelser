@@ -65,4 +65,10 @@
     @include shift(0);
     @include span-columns(8);
   }
+
+  h3 {
+    font-size: rem(20);
+    @include media($tablet) { font-size: rem(24); }
+    @include media($laptop) { font-size: rem(30); }
+  }
 }
