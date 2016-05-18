@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// Views > Confessions > Show
+// -----------------------------------------------------------------------------
+
+.confession--show {
+  background: color("light-green");
+  padding-top: 85px;
+
+  &__container {
+    @extend .container;
+  }
+
+  &__hero {
+    @extend .hero;
+    margin-bottom: 10px;
+
+    @include media($tablet) {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    @include media($laptop) {
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__sidebar {
+    @extend .sidebar;
+
+    .share {
+      display: block;
+      font-size: rem(20);
+    }
+  }
+
+  &__main {
+    @extend .main;
+
+    p {
+      color: color("gray-60");
+    }
+
+    .author {
+      margin-top: 40px;
+    }
+  }
+}
