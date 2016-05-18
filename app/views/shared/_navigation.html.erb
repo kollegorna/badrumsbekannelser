@@ -1,10 +1,11 @@
 <nav class="navigation open">
   <ul>
-    <li class="current">Start</li>
-    <li>Se filmen</li>
-    <li>Om projektet</li>
-    <li>Så fungerar speglarna</li>
-    <li>Vår psykolog</li>
-    <li>Besök dina.se</li>
+    <%= nav_link 'Start', root_path %>
+    <%= nav_link 'Se filmen', '#' %>
+    <%= nav_link 'Om projektet', pages_about_path %>
+    <%= nav_link 'Så fungerar speglarna', pages_about_mirrors_path %>
+    <%= nav_link 'Vår psykolog', pages_psychologist_path %>
+    <%= nav_link 'Besök dina.se', 'https://www.dina.se/' %>
+    <%= nav_link 'Start', root_path %>
   </ul>
 </nav>

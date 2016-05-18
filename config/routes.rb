@@ -5,14 +5,14 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'dev-mirrors' => 'pages#dev_mirrors'
+  # Static pages
 
-  get 'dev-home' => 'pages#dev_home'
-  get 'dev-about' => 'pages#dev_about'
-  get 'dev-about-mirrors' => 'pages#dev_about_mirrors'
-  get 'dev-psychologist' => 'pages#dev_psychologist'
-  get 'dev-confessions' => 'pages#dev_confessions'
-  get 'dev-confession' => 'pages#dev_confession'
+  get 'about',         to: 'pages#about',         as: 'pages_about'
+  get 'about-mirrors', to: 'pages#about_mirrors', as: 'pages_about_mirrors'
+  get 'psychologist',  to: 'pages#psychologist',  as: 'pages_psychologist'
+  get 'mirrors',       to: 'pages#mirrors'
+
+  # Resources
 
   resources :confessions, only: [:index, :new, :edit, :create, :update, :destroy]
 
