@@ -1,7 +1,7 @@
 class FamiliesController < ApplicationController
   before_action :set_family
 
-  layout 'mirrors'
+  layout 'mirror'
 
   def mirror
     @confessions = @family.confessions.order(created_at: :desc)
