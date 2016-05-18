@@ -1,19 +1,16 @@
 class ConfessionsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_confession, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show]
 
   def index
-    @confessions = Confession.all
+    @confessions = current_user.confessions.order(created_at: :desc)
   end
 
   def new
-    @confession = Confession.new
-  end
-
-  def edit
+    @confession = current_user.confessions.new
   end
 
   def show
+    @confession = Confession.find(params[:id])
   end
 
   def create
@@ -26,25 +23,7 @@ class ConfessionsController < ApplicationController
     end
   end
 
-  def update
-    if @confession.update(confession_params)
-      redirect_to confessions_url, notice: 'Confession was successfully updated.'
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @confession.destroy
-
-    redirect_to confessions_url, notice: 'Confession was successfully destroyed.'
-  end
-
   private
-
-  def set_confession
-    @confession = Confession.find(params[:id])
-  end
 
   def confession_params
     params.fetch(:confession, {}).permit(:body)

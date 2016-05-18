@@ -16,10 +16,8 @@
       <tr>
         <td><%= confession.user.name %></td>
         <td><%= simple_format confession.body %></td>
-        <td></td>
         <td>
-          <%= link_to 'Edit', edit_confession_path(confession) %> |
-          <%= link_to 'Destroy', confession, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Show', confession_path(confession) %>
         </td>
       </tr>
     <% end %>

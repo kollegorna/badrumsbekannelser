@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Resources
 
-  resources :confessions, only: [:index, :new, :show, :edit, :create]
+  resources :confessions, only: [:index, :new, :show, :create]
 
   resources :families, only: [] do
     get 'mirror', on: :member
