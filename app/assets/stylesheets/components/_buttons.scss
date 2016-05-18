@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
+.share {
+  &--facebook {
+    color: color("facebook");
+    &:hover { color: darken(color("facebook"), 20); }
+  }
+  &--twitter {
+    color: color("twitter");
+    &:hover { color: darken(color("twitter"), 20); }
+  }
+}
