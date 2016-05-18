@@ -1,6 +1,52 @@
 // -----------------------------------------------------------------------------
 // Buttons
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// Buttons
+// -----------------------------------------------------------------------------
+.button {
+  font-family: $ds-font-family-complementary;
+  background-color: $ds-color-button;
+  color: $ds-color-button-text;
+  border: 0;
+  border-radius: 4px;
+  display: inline-block;
+  padding: rem(4) rem(10);
+  width: auto;
+
+  @include media($tablet) {
+    padding: rem(12) rem(20);
+  }
+
+  @each $key, $value in $ds-colors {
+    &--#{$key} {
+      background-color: $value;
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(lighten($value, 10)), to($value));
+      background: -webkit-linear-gradient(top, lighten($value, 10), $value);
+      background: -moz-linear-gradient(top, lighten($value, 10), $value);
+      background: -ms-linear-gradient(top, lighten($value, 10), $value);
+      background: -o-linear-gradient(top, lighten($value, 10), $value);
+      color: set-text-color($value);
+
+      &:hover {
+        background-color: darken($value, 10);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from($value), to(darken($value, 10)));
+        background: -webkit-linear-gradient(top, $value, darken($value, 10));
+        background: -moz-linear-gradient(top, $value, darken($value, 10));
+        background: -ms-linear-gradient(top, $value, darken($value, 10));
+        background: -o-linear-gradient(top, $value, darken($value, 10));
+        color: set-text-color($value);
+      }
+    }
+  }
+}
+
+@each $key, $value in $ds-colors {
+  .link--#{$key} {
+    color: $value;
+  }
+}
+
 .share {
   &--facebook {
     color: color("facebook");

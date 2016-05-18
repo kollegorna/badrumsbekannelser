@@ -2,62 +2,67 @@
 // Basic Grid
 // -----------------------------------------------------------------------------
 
-.container {
-  @include outer-container;
+.hero {
+  .hero__container {
+    @include outer-container;
+  }
 
-  .hero {
+  .hero__content {
     @include shift(1);
     @include span-columns(10);
-    margin-bottom: 30px;
 
     @include media($laptop) {
       @include shift(0);
       @include span-columns(12);
     }
-
-    h1 {
-      font-size: rem(24);
-      @include media($tablet) { font-size: rem(36); }
-      @include media($laptop) { font-size: rem(48); }
-    }
   }
 
-  .sidebar {
-    @include shift(1);
-    @include span-columns(10);
-    margin-bottom: 30px;
+  h1 {
+    font-size: rem(24);
+    @include media($tablet) { font-size: rem(36); }
+    @include media($laptop) { font-size: rem(48); }
+  }
+}
 
-    @include media($tablet) {
-      @include span-columns(4);
-    }
+.container {
+  @include outer-container;
+}
 
-    @include media($laptop) {
-      @include shift(0);
-      @include span-columns(4);
-    }
+.sidebar {
+  @include shift(1);
+  @include span-columns(10);
+  margin-bottom: 30px;
 
-    h2 {
-      margin: 0 0 20px 0;
-      font-size: rem(20);
-      color: color("gray-60");
-
-      @include media($tablet) { font-size: rem(24); }
-      @include media($laptop) { font-size: rem(30); }
-    }
+  @include media($tablet) {
+    @include span-columns(4);
   }
 
-  .main {
-    @include shift(1);
-    @include span-columns(10);
+  @include media($laptop) {
+    @include shift(0);
+    @include span-columns(4);
+  }
 
-    @include media($tablet) {
-      @include shift(0);
-      @include span-columns(6);
-    }
+  h2 {
+    margin: 0 0 20px 0;
+    font-size: rem(20);
+    color: color("gray-60");
 
-    @include media($laptop) {
-      @include shift(0);
-      @include span-columns(8);
-    }
+    @include media($tablet) { font-size: rem(24); }
+    @include media($laptop) { font-size: rem(30); }
+  }
+}
+
+.main {
+  @include shift(1);
+  @include span-columns(10);
+
+  @include media($tablet) {
+    @include shift(0);
+    @include span-columns(6);
+  }
+
+  @include media($laptop) {
+    @include shift(0);
+    @include span-columns(8);
   }
 }
