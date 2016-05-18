@@ -1,11 +1,11 @@
 {
-  "name": "badrumsbekannelsen",
+  "name": "badrumsbekannelser",
   "version": "1.0.0",
   "author": "Kollegorna AB",
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kollegorna/badrumsbekannelsen.git"
+    "url": "https://github.com/kollegorna/badrumsbekannelser.git"
   },
   "dependencies": {
     "bower": "1.7.x"

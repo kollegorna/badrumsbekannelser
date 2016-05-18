@@ -1,4 +1,4 @@
-namespace :badrumsbekannelsen do
+namespace :badrumsbekannelser do
   namespace :dev do
     desc "Add seed data for development"
     task :seed => :environment do
