@@ -18,6 +18,7 @@
   }
 
   h1 {
+    font-family: $ds-font-family-bold;
     font-size: rem(24);
     @include media($tablet) { font-size: rem(36); }
     @include media($laptop) { font-size: rem(48); }
@@ -47,8 +48,13 @@
     font-size: rem(20);
     color: color("gray-60");
 
-    @include media($tablet) { font-size: rem(24); }
-    @include media($laptop) { font-size: rem(30); }
+    @include media($tablet) {
+      font-size: rem(24);
+    }
+    @include media($laptop) {
+      font-size: rem(30);
+      max-width: 255px;
+    }
   }
 }
 
@@ -68,7 +74,21 @@
 
   h3 {
     font-size: rem(20);
-    @include media($tablet) { font-size: rem(24); }
-    @include media($laptop) { font-size: rem(30); }
+    margin: 0;
+    margin-top: rem(10);
+    margin-bottom: rem(5);
+
+    @include media($tablet) {
+      font-size: rem(24);
+      margin-top: rem(15);
+    }
+    @include media($laptop) {
+      font-size: rem(30);
+      margin-top: rem(30);
+    }
+  }
+
+  p {
+    font-size: rem(14);
   }
 }
