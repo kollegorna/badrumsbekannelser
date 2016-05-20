@@ -11,9 +11,15 @@
     float: left;
     @include transition(opacity 0.5s ease-out);
 
-    img {
+    svg {
       width: auto;
       height: 45px;
+
+      #type { display: none; }
+
+      @include media($tablet) {
+        #type { display: block; }
+      }
     }
   }
 
