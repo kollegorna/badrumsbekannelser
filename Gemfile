@@ -64,5 +64,5 @@ source 'https://rubygems.org' do
   gem 'devise', '~> 4.1.0'
   gem 'honeybadger', '~> 2.6.0'
   gem 'normalize-rails', '~> 3.0.3'
-  gem 'inline_svg'
+  gem 'inline_svg', '~> 0.8.0'
 end
