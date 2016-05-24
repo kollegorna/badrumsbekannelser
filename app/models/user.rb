@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   belongs_to :family, counter_cache: true
   has_many :confessions
 
-  validates :first_name, :last_name, :family, presence: true
+  validates :first_name, :last_name, :family, :birthdate, presence: true
 
   def to_s
     name
@@ -15,5 +15,9 @@ class User < ActiveRecord::Base
 
   def name
     "#{first_name} #{last_name}"
+  end
+
+  def age
+    ((Time.zone.now - birthdate.to_time)/1.year.to_i).floor if birthdate
   end
 end
