@@ -8,7 +8,8 @@ ActiveAdmin.register User do
   filter :created_at
   filter :updated_at
 
-  permit_params :email, :password, :family_id, :first_name, :last_name
+  permit_params :email, :password, :family_id,
+                :first_name, :last_name, :birthdate
 
   config.sort_order = 'created_at_desc'
 
@@ -19,6 +20,7 @@ ActiveAdmin.register User do
     column :first_name
     column :last_name
     column :email
+    column :birthdate
     column :created_at
     column :updated_at
 
@@ -32,6 +34,7 @@ ActiveAdmin.register User do
       row :first_name
       row :last_name
       row :email
+      row :birthdate
       row :created_at
       row :updated_at
     end
@@ -56,6 +59,7 @@ ActiveAdmin.register User do
       f.input :first_name
       f.input :last_name
       f.input :email, required: true
+      f.input :birthdate, start_year: 1900, end_year: Time.zone.now.year
 
       if f.object.new_record?
         f.input :password

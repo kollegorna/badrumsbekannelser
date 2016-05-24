@@ -110,7 +110,7 @@ GEM
       has_scope (~> 0.6.0.rc)
       railties (>= 3.2, < 5)
       responders
-    inline_svg (0.6.4)
+    inline_svg (0.8.0)
       activesupport (>= 4.0.4)
       loofah (>= 2.0)
       nokogiri (~> 1.6)
@@ -265,7 +265,7 @@ DEPENDENCIES
   faker (~> 1.6.3)!
   heroku-deflater!
   honeybadger (~> 2.6.0)!
-  inline_svg!
+  inline_svg (~> 0.8.0)!
   jbuilder (~> 2.0)!
   jquery-rails!
   jquery-turbolinks!
