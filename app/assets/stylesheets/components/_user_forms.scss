@@ -53,9 +53,13 @@
   }
 
   .actions {
-    width: 50%;
-    float: right;
-    text-align: right;
+    text-align: center;
+
+    &--half {
+      width: 50%;
+      float: right;
+      text-align: right;
+    }
 
     input {
       width: auto;

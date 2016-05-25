@@ -3,6 +3,8 @@
 <section class="sign_in__container">
 
   <main class="sign_in__main">
+    <h1>Log in</h1>
+
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { :class => "form--user"}) do |f| %>
       <div class="field">
         <%= f.label :email %>
@@ -21,7 +23,7 @@
         </div>
       <% end -%>
 
-      <div class="actions">
+      <div class="actions actions--half">
         <%= f.submit "Log in" %>
       </div>
     <% end %>
