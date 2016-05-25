@@ -18,6 +18,13 @@
       @include span-columns(6);
     }
 
+    h1 {
+      font-family: $ds-font-family-bold;
+      font-size: rem(24);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     p {
       color: color("gray-60");
     }
