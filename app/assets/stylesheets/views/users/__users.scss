@@ -1,11 +1,7 @@
 // -----------------------------------------------------------------------------
-// Components
+// Views > User Pages (Devise)
 // -----------------------------------------------------------------------------
 
-@import 'author_card';
-@import 'buttons';
-@import "grid";
-@import 'icons';
-@import 'hamburger';
-@import 'ui';
-@import 'user_forms';
+@import 'shared/header';
+@import 'shared/links';
+@import 'sign_in';

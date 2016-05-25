@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Views > Users > Sign in
+// -----------------------------------------------------------------------------
+
+.sign_in {
+  background: color("light-green");
+
+  &__container {
+    @extend .container;
+  }
+
+  &__main {
+    @include shift(1);
+    @include span-columns(10);
+
+    @include media($tablet) {
+      @include shift(3);
+      @include span-columns(6);
+    }
+
+    p {
+      color: color("gray-60");
+    }
+  }
+}

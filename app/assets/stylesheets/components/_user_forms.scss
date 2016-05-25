@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// Devise Forms
+// -----------------------------------------------------------------------------
+
+.form--user {
+  padding: 40px;
+  background: color("green");
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  label {
+    color: white;
+    font-family: $ds-font-family-complementary;
+    font-weight: $ds-font-weight-bold;
+    font-size: rem(12);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+
+  .field {
+    &--checkbox {
+      float: left;
+      width: 50%;
+      padding-top: 12px;
+
+      input {
+        float: left;
+        width: auto;
+        margin: 0 4px 0 0;
+      }
+
+      label {
+        line-height: 14px;
+      }
+    }
+  }
+
+  .actions {
+    width: 50%;
+    float: right;
+    text-align: right;
+
+    input {
+      width: auto;
+      margin: 0;
+      border: 0;
+      color: color("green");
+      text-transform: uppercase;
+      font-weight: $ds-font-weight-bold;
+
+      &:hover {
+        background: color("light-green");
+      }
+    }
+  }
+}
