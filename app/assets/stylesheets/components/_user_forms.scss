@@ -3,8 +3,12 @@
 // -----------------------------------------------------------------------------
 
 .form--user {
-  padding: 40px;
+  padding: 20px 30px;
   background: color("green");
+
+  @include media($tablet) {
+    padding: 40px;
+  }
 
   &:after {
     content: "";
@@ -19,6 +23,15 @@
     font-size: rem(12);
     margin-bottom: 5px;
     text-transform: uppercase;
+  }
+
+  em {
+    font-style: normal;
+    font-family: $ds-font-family-complementary;
+    font-size: rem(12);
+    display: block;
+    color: color("light-green");
+    margin: -6px 0 8px 0;
   }
 
   .field {
@@ -55,6 +68,24 @@
       &:hover {
         background: color("light-green");
       }
+    }
+  }
+}
+
+#error_explanation {
+  h2 {
+    color: white;
+    font-family: $ds-font-family-complementary;
+    font-weight: $ds-font-weight-bold;
+    font-size: rem(18);
+    margin-top: 0;
+  }
+
+  ul {
+    li {
+      color: white;
+      font-family: $ds-font-family-complementary;
+      font-size: rem(14);
     }
   }
 }
