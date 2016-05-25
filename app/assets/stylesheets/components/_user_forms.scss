@@ -71,3 +71,21 @@
     }
   }
 }
+
+#error_explanation {
+  h2 {
+    color: white;
+    font-family: $ds-font-family-complementary;
+    font-weight: $ds-font-weight-bold;
+    font-size: rem(18);
+    margin-top: 0;
+  }
+
+  ul {
+    li {
+      color: white;
+      font-family: $ds-font-family-complementary;
+      font-size: rem(14);
+    }
+  }
+}
