@@ -1,11 +1,11 @@
 // -----------------------------------------------------------------------------
-// Components
+// Views > Users > Links
 // -----------------------------------------------------------------------------
 
-@import 'author_card';
-@import 'buttons';
-@import "grid";
-@import 'icons';
-@import 'hamburger';
-@import 'ui';
-@import 'user_forms';
+.user__links {
+  width: 100%;
+  padding-top: 40px;
+  text-align: center;
+
+  font-size: rem(18);
+}

@@ -19,11 +19,11 @@ label {
 input,
 textarea,
 select {
-  border: 1px solid $ds-color-input-border;
+  border: 0;
   border-radius: rem(8);
   background: $ds-color-input;
   color: $ds-color-input-text;
-  font-family: inherit;
+  font-family: $ds-font-family-complementary;
   font-size: $ds-h5-font-size;
   margin: 0 0 $ds-type-margin;
   max-width: 100%;

@@ -1,11 +1,14 @@
 // -----------------------------------------------------------------------------
-// Components
+// Views > Users > Header
 // -----------------------------------------------------------------------------
 
-@import 'author_card';
-@import 'buttons';
-@import "grid";
-@import 'icons';
-@import 'hamburger';
-@import 'ui';
-@import 'user_forms';
+.user_header {
+  width: 100%;
+  text-align: center;
+  padding: 50px 0;
+
+  svg {
+    width: 80%;
+    max-width: 200px;
+  }
+}
