@@ -5,11 +5,13 @@ ActiveAdmin.register User do
   filter :first_name
   filter :last_name
   filter :email
+  filter :username
   filter :created_at
   filter :updated_at
 
   permit_params :email, :password, :family_id,
-                :first_name, :last_name, :birthdate
+                :first_name, :last_name, :username,
+                :birthdate
 
   config.sort_order = 'created_at_desc'
 
@@ -33,6 +35,7 @@ ActiveAdmin.register User do
       row :family
       row :first_name
       row :last_name
+      row :username
       row :email
       row :birthdate
       row :created_at
@@ -58,6 +61,7 @@ ActiveAdmin.register User do
       end
       f.input :first_name
       f.input :last_name
+      f.input :username
       f.input :email, required: true
       f.input :birthdate, start_year: 1900, end_year: Time.zone.now.year
 
