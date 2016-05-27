@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   # Static pages
 
-  get 'om',         to: 'pages#about',         as: 'about_page'
+  get 'om',        to: 'pages#about',         as: 'about_page'
   get 'speglarna', to: 'pages#about_mirrors', as: 'about_mirrors_page'
   get 'psykolog',  to: 'pages#psychologist',  as: 'psychologist_page'
 

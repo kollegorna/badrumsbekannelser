@@ -1,5 +1,15 @@
-<h1>New Confession</h1>
+<% content_for :body_classes, "users confession--new" %>
 
-<%= render 'form' %>
+<section class="confession--new__container">
 
-<%= link_to 'Back', confessions_path %>
+  <main class="confession--new__main">
+
+    <h1>Add Confession</h1>
+
+    <%= render 'form' %>
+
+    <%= link_to 'Back', confessions_path %>
+
+  </main>
+
+</section>

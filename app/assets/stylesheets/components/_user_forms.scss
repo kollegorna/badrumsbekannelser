@@ -76,6 +76,23 @@
   }
 }
 
+.form--confession {
+  color: $ds-font-family-complementary;
+
+  textarea {
+    min-height: 300px;
+  }
+
+  .actions {
+    text-align: center;
+    
+    input[type="submit"] {
+      width: auto;
+      margin: 20px auto;
+    }
+  }
+}
+
 #error_explanation {
   h2 {
     color: white;
