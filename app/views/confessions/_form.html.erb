@@ -1,4 +1,4 @@
-<%= form_for(@confession) do |f| %>
+<%= form_for(@confession, html: { :class => "form--confession"}) do |f| %>
   <% if @confession.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@confession.errors.count, "error") %> prohibited this confession from being saved:</h2>
@@ -12,11 +12,10 @@
   <% end %>
 
   <div>
-    <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add", :class => "button button--green" %>
   </div>
 <% end %>

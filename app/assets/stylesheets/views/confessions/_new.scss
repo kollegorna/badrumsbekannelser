@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// Views > Confessions > New
+// -----------------------------------------------------------------------------
+
+.confession--new {
+  padding-top: 100px;
+  background: color("light-green");
+
+  &__container {
+    @extend .container;
+  }
+
+  &__main {
+    @include shift(1);
+    @include span-columns(10);
+
+    text-align: center;
+
+    @include media($tablet) {
+      @include shift(2);
+      @include span-columns(8);
+    }
+
+    h1 {
+      font-family: $ds-font-family-bold;
+      font-size: rem(24);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: color("gray-60");
+    }
+  }
+}
