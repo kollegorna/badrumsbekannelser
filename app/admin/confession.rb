@@ -5,7 +5,8 @@ ActiveAdmin.register Confession do
   filter :featured
   filter :created_at
 
-  permit_params :featured, comment_attributes: [:id, :title, :body, :_destroy]
+  permit_params :excerpt, :featured,
+                comment_attributes: [:id, :title, :body, :_destroy]
 
   config.sort_order = 'created_at_desc'
 
@@ -21,6 +22,7 @@ ActiveAdmin.register Confession do
     end
 
     column :body
+    column :featured
     column :comment do |c|
       c.comment ? status_tag(:yes) : status_tag(:no)
     end
@@ -33,6 +35,7 @@ ActiveAdmin.register Confession do
     f.inputs 'Confession' do
       f.input :user, input_html: { disabled: true }
       f.input :body, input_html: { disabled: true }
+      f.input :excerpt
       f.input :featured
     end
 
