@@ -2,6 +2,8 @@ ActiveAdmin.register Mirror do
 
   permit_params :name, :family_id, :on
 
+  config.sort_order = 'name_desc'
+
   index do
     id_column
 
