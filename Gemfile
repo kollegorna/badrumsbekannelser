@@ -63,6 +63,7 @@ source 'https://rubygems.org' do
   gem 'autoprefixer-rails', '~> 6.3.6'
   gem 'devise', '~> 4.1.0'
   gem 'honeybadger', '~> 2.6.0'
-  gem 'normalize-rails', '~> 3.0.3'
   gem 'inline_svg', '~> 0.8.0'
+  gem 'normalize-rails', '~> 3.0.3'
+  gem 'pusher', '~> 1.1.0'
 end

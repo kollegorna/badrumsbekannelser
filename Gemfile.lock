@@ -104,6 +104,7 @@ GEM
     heroku-deflater (0.6.2)
       rack (>= 1.4.5)
     honeybadger (2.6.0)
+    httpclient (2.8.0)
     i18n (0.7.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
@@ -155,6 +156,11 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     puma (3.4.0)
+    pusher (1.1.0)
+      httpclient (~> 2.7)
+      multi_json (~> 1.0)
+      pusher-signature (~> 0.1.8)
+    pusher-signature (0.1.8)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -273,6 +279,7 @@ DEPENDENCIES
   pg (~> 0.15)!
   pry-rails!
   puma (~> 3.4.0)!
+  pusher (~> 1.1.0)!
   rack-timeout (~> 0.4.2)!
   rails (= 4.2.6)!
   rails_12factor!

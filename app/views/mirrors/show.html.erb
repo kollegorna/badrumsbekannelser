@@ -1,5 +1,10 @@
-<% if @mirror.on? %>
-  <div class="mirror">
-    <%= simple_format @confession.body %>
-  </div>
-<% end %>
+<div id="confession">
+  <%= render partial: 'confession', locals: { mirror: @mirror, confession: @confession } %>
+</div>
+
+<script data-turbolinks-eval=false>
+  var channel = pusher.subscribe('<%= @mirror.id %>');
+  channel.bind("update", function(data) {
+    Turbolinks.visit(location.toString());
+  });
+</script>
