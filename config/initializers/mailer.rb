@@ -8,6 +8,6 @@ if Rails.env.production?
     :password       => Rails.application.secrets.smtp_password,
     :domain         => Rails.application.secrets.smtp_domain,
   }
-
-  ActionMailer::Base.default_url_options = { host: Rails.application.secrets.mailer_host }
 end
+
+ActionMailer::Base.default_url_options = { host: Rails.application.secrets.mailer_host }

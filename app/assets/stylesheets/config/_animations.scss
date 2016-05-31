@@ -1,3 +1,31 @@
 // -----------------------------------------------------------------------------
 // Animations
 // -----------------------------------------------------------------------------
+
+@-webkit-keyframes flash_messages {
+    from { @include transform(translate(0, 120%)); }
+    10% { @include transform(translate(0, 0)); }
+    90% { @include transform(translate(0, 0)); }
+    to { @include transform(translate(0, 120%)); }
+}
+
+@-moz-keyframes flash_messages {
+    from { @include transform(translate(0, 120%)); }
+    10% { @include transform(translate(0, 0)); }
+    90% { @include transform(translate(0, 0)); }
+    to { @include transform(translate(0, 120%)); }
+}
+
+@-ms-keyframes flash_messages {
+    from { @include transform(translate(0, 120%)); }
+    10% { @include transform(translate(0, 0)); }
+    90% { @include transform(translate(0, 0)); }
+    to { @include transform(translate(0, 120%)); }
+}
+
+@keyframes flash_messages {
+    from { @include transform(translate(0, 120%)); }
+    10% { @include transform(translate(0, 0)); }
+    90% { @include transform(translate(0, 0)); }
+    to { @include transform(translate(0, 120%)); }
+}
