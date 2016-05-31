@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<% content_for :body_classes, "users confession--index" %>
 
-<h1>Listing Confessions</h1>
+<p class="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Body</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+<section class="confession--index__container">
 
-  <tbody>
+  <main class="confession--index__main">
+
+    <div class="confession--index__new">
+      <%= link_to 'New Confession', new_confession_path, :class => "button button--green" %>
+    </div>
+
     <% @confessions.each do |confession| %>
-      <tr>
-        <td><%= confession.user.name %></td>
-        <td><%= simple_format confession.body %></td>
-        <td>
-          <%= link_to 'Show', confession_path(confession) %>
-        </td>
-      </tr>
+    <article class="confession--index__confession">
+      <div class="content">
+        <%= link_to confession_path(confession) do %>
+          <%= simple_format(truncate(confession.body, :length => 200)) %>
+          <div class="action">
+            <%= link_to "Edit", edit_confession_path(confession), :class => "button button--green" %>
+          </div>
+        <% end %>
+      </div>
+    </article>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    <div class="confession--index__signout">
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "button button--gray-40 button--small" %>
+    </div>
 
-<%= link_to 'New Confession', new_confession_path %>
+  </main>
+
+</section>
