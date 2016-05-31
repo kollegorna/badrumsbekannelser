@@ -13,6 +13,10 @@ class ConfessionsController < ApplicationController
     @confession = Confession.find(params[:id])
   end
 
+  def edit
+    @confession = current_user.confessions.find(params[:id])
+  end
+
   def create
     @confession = current_user.confessions.new(confession_params)
 
@@ -20,6 +24,16 @@ class ConfessionsController < ApplicationController
       redirect_to confessions_url, notice: 'Confession was successfully created.'
     else
       render :new
+    end
+  end
+
+  def update
+    @confession = current_user.confessions.find(params[:id])
+
+    if @confession.update_attributes(confession_params)
+      redirect_to confessions_url, notice: 'Confession was successfully updated.'
+    else
+      render :update
     end
   end
 
