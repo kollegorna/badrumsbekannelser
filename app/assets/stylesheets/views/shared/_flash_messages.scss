@@ -1,0 +1,24 @@
+.messages {
+  list-style: none;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: $ds-tooltips;
+  text-align: left;
+  @include transform(translate(0, 120%));
+  @include animation(flash_messages 10s ease-in-out);
+  box-shadow: rgba(color("black"), .1) 0px -5px 20px;
+
+  li {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    background: color("gray");
+    font-family: $ds-font-family-complementary;
+
+    &.notice { background: color("green"); color: white; }
+    &.alert { background: color("orange"); color: white; }
+  }
+}

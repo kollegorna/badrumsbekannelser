@@ -1,0 +1,8 @@
+<% unless flash.blank? %>
+  <ul class="messages">
+    <% flash.each do |message| %>
+      <li class="<%= message[0] %>"><%= message[1] %></li>
+    <% end %>
+  </ul>
+  <!-- / .messages -->
+<% end %>
