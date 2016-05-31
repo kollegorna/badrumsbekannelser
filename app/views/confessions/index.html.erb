@@ -16,7 +16,7 @@
         <%= link_to confession_path(confession) do %>
           <%= simple_format(truncate(confession.body, :length => 200)) %>
           <div class="action">
-            <%= link_to "Edit", "#", :class => "button button--green" %>
+            <%= link_to "Edit", edit_confession_path(confession), :class => "button button--green" %>
           </div>
         <% end %>
       </div>
@@ -24,7 +24,7 @@
     <% end %>
 
     <div class="confession--index__signout">
-      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "button button--orange" %>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => "button button--gray-40 button--small" %>
     </div>
 
   </main>
