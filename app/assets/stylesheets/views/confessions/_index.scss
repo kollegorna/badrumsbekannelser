@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// Views > Confessions > Index
+// -----------------------------------------------------------------------------
+
+.confession--index {
+  padding-top: 100px;
+  background: color("light-green");
+
+  &__container {
+    width: 100%;
+  }
+
+  &__main {
+    h1 {
+      font-family: $ds-font-family-bold;
+      font-size: rem(24);
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: color("gray-60");
+    }
+  }
+
+  &__new {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__signout {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  &__confession {
+    background: darken(color("light-green"), 5);
+    &:nth-child(even) { background: darken(color("light-green"), 10); }
+    width: 100%;
+    padding: 20px;
+
+    @include media($tablet) { padding: 40px; }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      p {
+        margin: 0;
+
+        @include media($tablet) {
+          font-size: rem(24);
+          font-family: $ds-font-family;
+          width: 90%;
+          float: left;
+        }
+
+        @include media($desktop) {
+          font-size: rem(36);
+        }
+      }
+
+      .action {
+        margin-top: 20px;
+
+        @include media($tablet) {
+          text-align: right;
+          width: 10%;
+          float: right;
+          margin-top: 0;
+        }
+      }
+
+      @include media($tablet) {
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+  }
+}
