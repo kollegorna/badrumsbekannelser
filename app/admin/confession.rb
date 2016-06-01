@@ -22,10 +22,19 @@ ActiveAdmin.register Confession do
     end
 
     column :body
-    column :featured
+
     column :comment do |c|
       c.comment ? status_tag(:yes) : status_tag(:no)
     end
+
+    column 'Featured' do |confession|
+      if confession.featured?
+        status_tag(:yes)
+      else
+        button_to 'Add as featured', feature_admin_confession_path(confession), method: :post, confirm: 'Are you sure?'
+      end
+    end
+
     column :created_at
 
     actions
@@ -47,6 +56,15 @@ ActiveAdmin.register Confession do
     end
 
     f.actions
+  end
+
+  member_action :feature, method: :post do
+    cell = Cell.new(confession: resource)
+    if cell.save
+      redirect_to admin_confessions_path, notice: "#{resource.id} has been featured successfully"
+    else
+      redirect_to admin_confessions_path, flash: {error: cell.errors.full_messages.first }
+    end
   end
 
   controller do

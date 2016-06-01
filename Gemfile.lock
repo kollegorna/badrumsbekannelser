@@ -55,6 +55,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_list (0.7.4)
+      activerecord (>= 3.0)
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (6.0.3)
@@ -263,6 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  acts_as_list (~> 0.7.4)!
   autoprefixer-rails (~> 6.3.6)!
   better_errors!
   byebug!
