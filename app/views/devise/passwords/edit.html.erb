@@ -3,26 +3,26 @@
 <section class="sign_in__container">
 
   <main class="sign_in__main">
-    <h1>Change your password</h1>
+    <h1>Byt lösenord</h1>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put, class: "form--user" }) do |f| %>
       <%= f.hidden_field :reset_password_token %>
 
       <div class="field">
-        <%= f.label :password, "New password" %>
+        <%= f.label :password, "Nytt lösenord" %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <em>(Minst <%= @minimum_password_length %> tecken)</em>
         <% end %>
         <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation, "Confirm new password" %>
+        <%= f.label :password_confirmation, "Bekräfta nytt lösenord" %>
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Change my password" %>
+        <%= f.submit "Byt lösenord" %>
       </div>
     <% end %>
 
