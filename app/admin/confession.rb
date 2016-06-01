@@ -2,10 +2,9 @@ ActiveAdmin.register Confession do
   actions :index, :show, :edit, :update
 
   filter :body
-  filter :featured
   filter :created_at
 
-  permit_params :excerpt, :featured,
+  permit_params :excerpt,
                 comment_attributes: [:id, :title, :body, :_destroy]
 
   config.sort_order = 'created_at_desc'
@@ -45,7 +44,6 @@ ActiveAdmin.register Confession do
       f.input :user, input_html: { disabled: true }
       f.input :body, input_html: { disabled: true }
       f.input :excerpt
-      f.input :featured
     end
 
     f.inputs 'Comment', for: [:comment, f.object.comment || Comment.new] do |c|
