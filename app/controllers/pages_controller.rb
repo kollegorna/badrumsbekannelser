@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def dev_mirrors
-    render layout: 'mirrors'
+  def home
+    @cells = Cell.order(position: :asc)
   end
 end

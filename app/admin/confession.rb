@@ -2,10 +2,9 @@ ActiveAdmin.register Confession do
   actions :index, :show, :edit, :update
 
   filter :body
-  filter :featured
   filter :created_at
 
-  permit_params :excerpt, :featured,
+  permit_params :excerpt,
                 comment_attributes: [:id, :title, :body, :_destroy]
 
   config.sort_order = 'created_at_desc'
@@ -22,10 +21,19 @@ ActiveAdmin.register Confession do
     end
 
     column :body
-    column :featured
+
     column :comment do |c|
       c.comment ? status_tag(:yes) : status_tag(:no)
     end
+
+    column 'Featured' do |confession|
+      if confession.featured?
+        status_tag(:yes)
+      else
+        button_to 'Add as featured', feature_admin_confession_path(confession), method: :post, confirm: 'Are you sure?'
+      end
+    end
+
     column :created_at
 
     actions
@@ -36,7 +44,6 @@ ActiveAdmin.register Confession do
       f.input :user, input_html: { disabled: true }
       f.input :body, input_html: { disabled: true }
       f.input :excerpt
-      f.input :featured
     end
 
     f.inputs 'Comment', for: [:comment, f.object.comment || Comment.new] do |c|
@@ -47,6 +54,15 @@ ActiveAdmin.register Confession do
     end
 
     f.actions
+  end
+
+  member_action :feature, method: :post do
+    cell = Cell.new(confession: resource)
+    if cell.save
+      redirect_to admin_confessions_path, notice: "#{resource.id} has been featured successfully"
+    else
+      redirect_to admin_confessions_path, flash: {error: cell.errors.full_messages.first }
+    end
   end
 
   controller do

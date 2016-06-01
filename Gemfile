@@ -60,6 +60,7 @@ source 'https://rubygems.org' do
   end
 
   gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git'
+  gem 'acts_as_list', '~> 0.7.4'
   gem 'autoprefixer-rails', '~> 6.3.6'
   gem 'devise', '~> 4.1.0'
   gem 'honeybadger', '~> 2.6.0'
