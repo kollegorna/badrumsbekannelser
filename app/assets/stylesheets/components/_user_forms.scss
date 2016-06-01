@@ -86,7 +86,9 @@
   .actions {
     text-align: center;
 
+    .button,
     input[type="submit"] {
+      display: inline;
       width: auto;
       margin: 20px auto;
     }

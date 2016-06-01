@@ -23,9 +23,44 @@
     }
   }
 
-  &__new {
-    text-align: center;
-    margin-bottom: 40px;
+  &__header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+
+    .title {
+      width: 50%;
+      float: left;
+
+      h3 {
+        margin: 6px 0 0 0;
+        font-size: rem(18);
+        font-family: $ds-font-family-bold;
+
+        @include media($tablet) {
+          font-size: rem(24);
+          font-family: $ds-font-family;
+          width: 80%;
+          float: left;
+        }
+
+        @include media($desktop) {
+          font-size: rem(36);
+        }
+      }
+    }
+
+    .new {
+      width: 50%;
+      float: right;
+      text-align: right;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
   }
 
   &__signout {
@@ -37,12 +72,12 @@
     background: darken(color("light-green"), 5);
     &:nth-child(even) { background: darken(color("light-green"), 10); }
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
 
-    @include media($tablet) { padding: 40px; }
+    @include media($tablet) { padding: 40px 0; }
 
     .content {
-      width: 100%;
+      width: 90%;
       max-width: 1200px;
       margin: 0 auto;
 
@@ -52,7 +87,7 @@
         @include media($tablet) {
           font-size: rem(24);
           font-family: $ds-font-family;
-          width: 90%;
+          width: 80%;
           float: left;
         }
 
@@ -66,7 +101,7 @@
 
         @include media($tablet) {
           text-align: right;
-          width: 10%;
+          width: 20%;
           float: right;
           margin-top: 0;
 
@@ -83,6 +118,49 @@
           clear: both;
         }
       }
+    }
+  }
+
+  &__mirror {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 4px;
+    border: 1px solid color("green");
+    margin: 40px auto;
+    padding: 20px;
+
+    .meta {
+      width: 75%;
+      float: left;
+    }
+
+    .onoff {
+      width: 25%;
+      float: left;
+      .switch {
+        margin: 8px 0 0 auto;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    h1 {
+      text-align: left;
+      margin: 0;
+    }
+
+    h2 {
+      color: color("green");
+      font-size: rem(10);
+      text-align: left;
+      text-transform: uppercase;
+      margin: 0;
+      font-family: $ds-font-family-complementary;
+      letter-spacing: rem(2);
     }
   }
 }
