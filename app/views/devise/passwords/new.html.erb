@@ -3,17 +3,19 @@
 <section class="sign_in__container">
 
   <main class="sign_in__main">
-    <h1>Forgot your password?</h1>
+    <h1>Glömt lösenordet?</h1>
+
+    <p>Fyll i din e-postadress så skickar vi en länk där du kan sätta ett nytt.</p>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { :class => "form--user"}) do |f| %>
 
       <div class="field">
-        <%= f.label :email %>
+        <%= f.label :email, "E-post" %>
         <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Send me reset password instructions" %>
+        <%= f.submit "Skicka" %>
       </div>
     <% end %>
 

@@ -7,7 +7,7 @@
   <main class="confession--index__main">
 
     <div class="confession--index__new">
-      <%= link_to 'New Confession', new_confession_path, :class => "button button--green" %>
+      <%= link_to 'Ny bekännelse', new_confession_path, :class => "button button--green" %>
     </div>
 
     <% @confessions.each do |confession| %>
@@ -16,7 +16,7 @@
         <%= link_to confession_path(confession) do %>
           <%= simple_format(truncate(confession.body, :length => 200)) %>
           <div class="action">
-            <%= link_to "Edit", edit_confession_path(confession), :class => "button button--green" %>
+            <%= link_to "Redigera", edit_confession_path(confession), :class => "button button--green" %>
           </div>
         <% end %>
       </div>

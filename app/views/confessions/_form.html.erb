@@ -1,7 +1,7 @@
 <%= form_for(@confession, html: { :class => "form--confession"}) do |f| %>
   <% if @confession.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@confession.errors.count, "error") %> prohibited this confession from being saved:</h2>
+      <h2>Följande saker gick fel:</h2>
 
       <ul>
       <% @confession.errors.full_messages.each do |message| %>
@@ -17,9 +17,9 @@
 
   <div class="actions">
     <% if f.object.new_record? %>
-      <%= f.submit 'Add', class: 'button button--green' %>
+      <%= f.submit 'Lägg till', class: 'button button--green' %>
     <% else %>
-      <%= f.submit 'Edit', class: 'button button--green' %>
+      <%= f.submit 'Redigera', class: 'button button--green' %>
     <% end %>
   </div>
 <% end %>
