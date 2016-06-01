@@ -12,7 +12,10 @@
   <% end %>
 
   <div>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, maxlength: 98 %>
+  </div>
+  <div class="character-count">
+    <span>0</span> av 98 tecken.
   </div>
 
   <div class="actions">

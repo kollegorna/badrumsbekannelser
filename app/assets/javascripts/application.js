@@ -12,3 +12,4 @@
 //= require app/init
 //= require app/navigation
 //= require app/analytics
+//= require app/confessions-admin
