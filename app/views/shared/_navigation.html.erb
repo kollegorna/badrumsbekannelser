@@ -5,6 +5,11 @@
     <%= nav_link 'Om projektet', about_page_path %>
     <%= nav_link 'Så fungerar speglarna', about_mirrors_page_path %>
     <%= nav_link 'Vår psykolog', psychologist_page_path %>
+
+    <% if current_user %>
+      <%= nav_link 'Dina bekännelser', confessions_path %>
+    <% end %>
+
     <%= nav_link 'Besök dina.se', 'https://www.dina.se/' %>
   </ul>
 </nav>
