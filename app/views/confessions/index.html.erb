@@ -16,6 +16,9 @@
         <%= simple_format(truncate(confession.body, :length => 200)) %>
         <div class="action">
           <%= link_to "Redigera", edit_confession_path(confession), :class => "button button--green" %>
+          <% unless confession.featured? %>
+            <%= link_to "Ta bort", edit_confession_path(confession), :class => "button button--gray-40 button--small", data: { confirm: "Vill du verkligen ta bort denna?"} %>
+          <% end %>
         </div>
       </div>
     </article>
