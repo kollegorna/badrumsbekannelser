@@ -13,12 +13,10 @@
     <% @confessions.each do |confession| %>
     <article class="confession--index__confession">
       <div class="content">
-        <%= link_to confession_path(confession) do %>
-          <%= simple_format(truncate(confession.body, :length => 200)) %>
-          <div class="action">
-            <%= link_to "Redigera", edit_confession_path(confession), :class => "button button--green" %>
-          </div>
-        <% end %>
+        <%= simple_format(truncate(confession.body, :length => 200)) %>
+        <div class="action">
+          <%= link_to "Redigera", edit_confession_path(confession), :class => "button button--green" %>
+        </div>
       </div>
     </article>
     <% end %>
