@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable,
-         :recoverable, :rememberable, :trackable, :validatable
+  devise :database_authenticatable, :rememberable, :trackable, :validatable,
+         authentication_keys:   [:username],
+         case_insensitive_keys: [:username],
+         strip_whitespace_keys: [:username]
 
   belongs_to :family, counter_cache: true
   has_many :confessions
@@ -24,5 +26,13 @@ class User < ActiveRecord::Base
 
   def password_required?
     new_record? || password.present? || password_confirmation.present?
+  end
+
+  def email_required?
+    false
+  end
+
+  def email_changed?
+    false
   end
 end

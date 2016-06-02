@@ -1,11 +1,10 @@
 ActiveAdmin.register User do
   actions :index, :new, :show, :edit, :create, :update
 
+  filter :username
   filter :family
   filter :first_name
   filter :last_name
-  filter :email
-  filter :username
   filter :created_at
   filter :updated_at
 
@@ -18,10 +17,10 @@ ActiveAdmin.register User do
   index do
     id_column
 
+    column :username
     column :family
     column :first_name
     column :last_name
-    column :email
     column :birthdate
     column :created_at
     column :updated_at
@@ -32,11 +31,10 @@ ActiveAdmin.register User do
   show do
     attributes_table do
       row :id
+      row :username
       row :family
       row :first_name
       row :last_name
-      row :username
-      row :email
       row :birthdate
       row :created_at
       row :updated_at
@@ -59,10 +57,9 @@ ActiveAdmin.register User do
       else
         f.input :family, include_blank: false
       end
+      f.input :username
       f.input :first_name
       f.input :last_name
-      f.input :username
-      f.input :email, required: true
       f.input :birthdate, start_year: 1900, end_year: Time.zone.now.year
     end
 
