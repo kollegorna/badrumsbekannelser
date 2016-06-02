@@ -38,6 +38,14 @@ class ConfessionsController < ApplicationController
     end
   end
 
+  def destroy
+    confession = current_user.confessions.find(params[:id])
+
+    confession.destroy
+
+    redirect_to confessions_path
+  end
+
   private
 
   def confession_params

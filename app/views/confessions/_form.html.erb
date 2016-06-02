@@ -23,7 +23,7 @@
       <%= f.submit 'Lägg till', class: 'button button--green' %>
     <% else %>
       <p><%= f.submit 'Redigera', class: 'button button--green' %></p>
-      <p><%= link_to 'Radera', "#", :class => "button button--orange button--small" %></p>
+      <p><%= link_to 'Radera', @confession, method: :delete, class: 'button button--orange button--small', data: { confirm: 'Är du säker?' } %></p>
     <% end %>
   </div>
 <% end %>
