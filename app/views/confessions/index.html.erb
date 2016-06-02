@@ -28,22 +28,27 @@
     </article>
     <% end %>
 
-    <div class="confession--index__mirror">
-      <div class="meta">
-        <h1><%= @mirror.family.name %></h1>
-        <h2>Spegel</h2>
-      </div>
+    <% @mirrors.each do |mirror| %>
+      <div class="confession--index__mirror">
+        <div class="meta">
+          <h1><%= mirror.family.name %></h1>
+          <h2>Spegel</h2>
+        </div>
 
-      <div class="onoff">
-        <div class="switch">
-          <input type="checkbox" name="switch" class="switch-checkbox" id="myswitch" checked>
-          <label class="switch-label" for="myswitch">
-            <span class="switch-inner"></span>
-            <span class="switch-switch"></span>
-          </label>
+        <div class="onoff">
+          <div class="switch">
+            <%= form_for(mirror, remote: true) do |f| %>
+              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+              <%= f.check_box :on, class: 'switch-checkbox', onclick: 'this.form.submit();' %>
+              <%= f.label :on, class: 'switch-label' do %>
+                <span class="switch-inner"></span>
+                <span class="switch-switch"></span>
+              <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
 
     <div class="confession--index__signout">
       <%= link_to "Logga ut", destroy_user_session_path, :class => "button button--gray-40 button--small" %>

@@ -3,7 +3,7 @@ class ConfessionsController < ApplicationController
 
   def index
     @confessions = current_user.confessions.order(created_at: :desc)
-    @mirror = current_user.family.mirrors.first
+    @mirrors = current_user.family.mirrors
   end
 
   def new
