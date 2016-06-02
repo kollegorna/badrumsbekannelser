@@ -9,7 +9,7 @@ ActiveAdmin.register User do
   filter :created_at
   filter :updated_at
 
-  permit_params :email, :password, :family_id,
+  permit_params :email, :password, :password_confirmation, :family_id,
                 :first_name, :last_name, :username,
                 :birthdate
 
@@ -64,14 +64,13 @@ ActiveAdmin.register User do
       f.input :username
       f.input :email, required: true
       f.input :birthdate, start_year: 1900, end_year: Time.zone.now.year
+    end
 
-      if f.object.new_record?
-        f.input :password
-        f.input :password_confirmation
-      end
+    f.inputs 'Password' do
+      f.input :password
+      f.input :password_confirmation
     end
 
     f.actions
   end
-
 end

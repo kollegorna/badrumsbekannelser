@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
   def age
     ((Time.zone.now - birthdate.to_time)/1.year.to_i).floor if birthdate
   end
+
+  def password_required?
+    new_record? || password.present? || password_confirmation.present?
+  end
 end
