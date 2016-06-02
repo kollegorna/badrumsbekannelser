@@ -3,5 +3,7 @@
     <%= simple_format confession.body %>
   </div>
 
-  <div class="info"><%= confession.user.username %> bekände detta för <%= time_ago_in_words(confession.created_at) %> sen</div>
+  <div class="info">
+    <%= confession.user.alias %> bekände detta för <%= time_ago_in_words(confession.created_at) %> sen
+  </div>
 <% end %>

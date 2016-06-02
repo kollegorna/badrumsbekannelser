@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   belongs_to :family, counter_cache: true
   has_many :confessions
 
-  validates :first_name, :last_name, :family, :birthdate, presence: true
+  validates :first_name, :last_name, :family, :alias, :birthdate, presence: true
   validates :username, length: { minimum: 4 }, uniqueness: true, presence: true
 
   def to_s

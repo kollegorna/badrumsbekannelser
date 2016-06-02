@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160602052455) do
+ActiveRecord::Schema.define(version: 20160602060059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,6 +114,7 @@ ActiveRecord::Schema.define(version: 20160602052455) do
     t.string   "last_name",              default: "", null: false
     t.date     "birthdate"
     t.string   "username",               default: "", null: false
+    t.string   "alias",                  default: "", null: false
   end
 
   add_index "users", ["family_id"], name: "index_users_on_family_id", using: :btree
