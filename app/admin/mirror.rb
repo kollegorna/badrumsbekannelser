@@ -13,6 +13,10 @@ ActiveAdmin.register Mirror do
     column :created_at
     column :updated_at
 
+    column :url do |mirror|
+      link_to 'Öppna', mirror_path(mirror), target: '_blank'
+    end
+
     actions
   end
 
