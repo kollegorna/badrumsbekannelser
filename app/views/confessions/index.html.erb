@@ -36,7 +36,7 @@
           <div class="switch">
             <%= form_for(mirror, remote: true) do |f| %>
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-              <%= f.check_box :on, class: 'switch-checkbox', onclick: 'this.form.submit();' %>
+              <%= f.check_box :on, class: 'switch-checkbox', onclick: "$(this.form).trigger('submit.rails');" %>
               <%= f.label :on, class: 'switch-label' do %>
                 <span class="switch-inner"></span>
                 <span class="switch-switch"></span>
