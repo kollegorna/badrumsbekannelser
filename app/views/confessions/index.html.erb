@@ -1,7 +1,5 @@
 <% content_for :body_classes, "users confession--index" %>
 
-<p class="notice"><%= notice %></p>
-
 <section class="confession--index__container">
 
   <main class="confession--index__main">
@@ -31,8 +29,7 @@
     <% @mirrors.each do |mirror| %>
       <div class="confession--index__mirror">
         <div class="meta">
-          <h1><%= mirror.family.name %></h1>
-          <h2>Spegel</h2>
+          <h1>Spegel på/av</h1>
         </div>
 
         <div class="onoff">

@@ -22,8 +22,8 @@
     <% if f.object.new_record? %>
       <%= f.submit 'Lägg till', class: 'button button--green' %>
     <% else %>
-      <%= link_to 'Radera', "#", :class => "button button--orange" %>
-      <%= f.submit 'Redigera', class: 'button button--green' %>
+      <p><%= f.submit 'Redigera', class: 'button button--green' %></p>
+      <p><%= link_to 'Radera', "#", :class => "button button--orange button--small" %></p>
     <% end %>
   </div>
 <% end %>
