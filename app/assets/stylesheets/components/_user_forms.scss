@@ -78,6 +78,7 @@
 
 .form--confession {
   color: $ds-font-family-complementary;
+  margin-bottom: 20px;
 
   textarea {
     min-height: 140px;
@@ -85,6 +86,10 @@
 
   .actions {
     text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
 
     .button,
     input[type="submit"] {

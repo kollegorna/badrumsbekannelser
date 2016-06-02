@@ -24,7 +24,7 @@
     box-sizing: border-box;
 }
 .switch-inner:before {
-    content: "On";
+    content: "På";
     padding-left: 10px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(lighten(color("green"), 10)), to(color("green")));
     background: -webkit-linear-gradient(top, lighten(color("green"), 10), color("green"));
@@ -34,7 +34,7 @@
     color: #FFFFFF;
 }
 .switch-inner:after {
-    content: "Off";
+    content: "Av";
     padding-right: 10px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(lighten(color("orange"), 10)), to(color("orange")));
     background: -webkit-linear-gradient(top, lighten(color("orange"), 10), color("orange"));
