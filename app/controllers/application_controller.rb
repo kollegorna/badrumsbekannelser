@@ -14,10 +14,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def layout_by_resource
-    if devise_controller?
-      "devise"
-    else
-      "application"
-    end
+    devise_controller? ? 'devise' : 'application'
+  end
+
+  def after_sign_in_path_for(_resource)
+    confessions_path
   end
 end
