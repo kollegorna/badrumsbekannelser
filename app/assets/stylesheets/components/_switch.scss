@@ -27,6 +27,7 @@
     content: "På";
     padding-left: 10px;
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(lighten(color("green"), 10)), to(color("green")));
+    background: color("green");
     background: -webkit-linear-gradient(top, lighten(color("green"), 10), color("green"));
     background: -moz-linear-gradient(top, lighten(color("green"), 10), color("green"));
     background: -ms-linear-gradient(top, lighten(color("green"), 10), color("green"));
@@ -36,6 +37,7 @@
 .switch-inner:after {
     content: "Av";
     padding-right: 10px;
+    background: color("orange");
     background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(lighten(color("orange"), 10)), to(color("orange")));
     background: -webkit-linear-gradient(top, lighten(color("orange"), 10), color("orange"));
     background: -moz-linear-gradient(top, lighten(color("orange"), 10), color("orange"));
