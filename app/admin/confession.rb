@@ -17,7 +17,7 @@ ActiveAdmin.register Confession do
     end
 
     column :user do |c|
-      c.user.email
+      link_to c.user.username, admin_user_path(c.user)
     end
 
     column :body
