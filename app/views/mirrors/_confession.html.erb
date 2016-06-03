@@ -1,6 +1,8 @@
 <% if mirror.on? && confession %>
   <div class="confession">
-    <div><%= simple_format confession.body %></div>
+    <div>
+      <%= simple_format emojify confession.body %>
+    </div>
   </div>
 
   <div class="info">
