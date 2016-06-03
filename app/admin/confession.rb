@@ -1,5 +1,5 @@
 ActiveAdmin.register Confession do
-  actions :index, :show, :edit, :update
+  actions :index, :show, :edit, :update, :destroy
 
   filter :body
   filter :created_at
