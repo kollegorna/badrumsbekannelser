@@ -17,7 +17,12 @@ class ApplicationController < ActionController::Base
     devise_controller? ? 'devise' : 'application'
   end
 
-  def after_sign_in_path_for(_resource)
-    confessions_path
+  def after_sign_in_path_for(resource)
+    case resource
+    when AdminUser
+      admin_dashboard_path
+    when User
+      confessions_path
+    end
   end
 end
