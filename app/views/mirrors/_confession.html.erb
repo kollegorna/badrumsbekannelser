@@ -4,6 +4,7 @@
   </div>
 
   <div class="info">
-    <%= confession.user.alias %> bekände detta för <%= time_ago_in_words(confession.created_at) %> sen
+    <%= confession.user.alias %> bekände detta<br>
+    för <%= time_ago_in_words(confession.created_at) %> sen
   </div>
 <% end %>
