@@ -67,4 +67,5 @@ source 'https://rubygems.org' do
   gem 'inline_svg', '~> 0.8.0'
   gem 'normalize-rails', '~> 3.0.3'
   gem 'pusher', '~> 1.1.0'
+  gem 'gemoji-parser'
 end
