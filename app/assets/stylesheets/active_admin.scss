@@ -1,7 +1,7 @@
 // SASS variable overrides must be declared before loading up Active Admin's styles.
 //
 // To view the variables that Active Admin provides, take a look at
-// `app/assets/stylesheets/active_admin/mixins/_variables.scss` in the
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
 // Active Admin source.
 //
 // For example, to change the sidebar width:
@@ -10,8 +10,91 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
+//@import "select2";
 
-// Overriding any non-variable SASS must be done after the fact.
-// For example, to change the default status-tag color:
-//
-//   .status_tag { background: #6090DB; }
+// -----------------------------------------------------------------------------
+// Color variables
+// -----------------------------------------------------------------------------
+$color-green:  #7EC179;
+$color-orange: #F6A258;
+$color-text:   #040404;
+
+// -----------------------------------------------------------------------------
+// Override theme variables
+// -----------------------------------------------------------------------------
+$skinLogo: none;
+$skinTextColor: $color-text;
+$skinTextActiveColor: #fff;
+$skinTextTable: $color-text;
+$skinActiveColor: lighten($color-green, 10);
+$skinHeaderBck: $color-green;
+$panelHeaderBck: $color-orange;
+
+// -----------------------------------------------------------------------------
+// Import theme
+// -----------------------------------------------------------------------------
+//@import "active_skin";
+
+#header {
+  h1.site_title {
+    padding-left: 30px;
+    text-indent: 1px;
+
+    img {
+      height: 16px;
+      top: 1px;
+      width: auto;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Override style not taken care of in active_skin
+// -----------------------------------------------------------------------------
+// Fix color of "path-text" in titlebar
+.breadcrumb a, .breadcrumb a:link, .breadcrumb a:visited, .breadcrumb a:active {
+  color: $skinTextActiveColor;
+}
+.breadcrumb .breadcrumb_sep {
+  color: $skinTextActiveColor;
+}
+// Fix button in titlebar
+#title_bar .action_items span.action_item > a, #title_bar .action_items span.action_item > .dropdown_menu > a {
+  box-shadow: none;
+  border-radius: 0;
+  background: $skinHeaderBck;
+  color: $skinTextActiveColor;
+  border: 2px solid #fff;;
+  text-shadow: none;
+  padding: 11px 20px;
+}
+
+form fieldset > ol > li.boolean {
+  height: auto;
+}
+
+// -----------------------------------------------------------------------------
+// Dashboard styles
+// -----------------------------------------------------------------------------
+.admin_dashboard {
+  #active_admin_content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .column {
+    display: flex;
+    float: none;
+  }
+
+  .panel {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  .amcharts-chart-div {
+    a {
+      display: none !important;
+    }
+  }
+}
