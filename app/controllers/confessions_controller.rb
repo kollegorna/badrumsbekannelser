@@ -16,13 +16,15 @@ class ConfessionsController < ApplicationController
 
   def edit
     @confession = current_user.confessions.find(params[:id])
+
+    redirect_to confessions_url if !@confession.editable?
   end
 
   def create
     @confession = current_user.confessions.new(confession_params)
 
     if @confession.save
-      redirect_to confessions_url, notice: 'Confession was successfully created.'
+      redirect_to confessions_url, notice: 'Bekännelsen har skapats.'
     else
       render :new
     end
@@ -31,8 +33,10 @@ class ConfessionsController < ApplicationController
   def update
     @confession = current_user.confessions.find(params[:id])
 
+    redirect_to confessions_url if !@confession.editable?
+
     if @confession.update_attributes(confession_params)
-      redirect_to confessions_url, notice: 'Confession was successfully updated.'
+      redirect_to confessions_url, notice: 'Bekännelsen har uppdaterats.'
     else
       render :update
     end

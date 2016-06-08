@@ -2,7 +2,7 @@ class Confession < ActiveRecord::Base
   belongs_to :user
   has_one :comment
   has_one :family, through: :user
-  has_one :cell
+  has_one :cell, dependent: :destroy
 
   validates :user, :body, presence: true
 
@@ -39,6 +39,16 @@ class Confession < ActiveRecord::Base
   end
 
   def published?
-    publish
+    published
+  end
+
+  def editable?
+    created_at > 30.minutes.ago ? true : false
+  end
+
+  def remaining_time
+    seconds = ((created_at + 30.minutes) - Time.zone.now).to_i
+
+    seconds.positive? ? seconds : 0
   end
 end

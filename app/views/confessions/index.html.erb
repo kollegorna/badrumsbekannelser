@@ -19,7 +19,13 @@
         <%= simple_format(truncate(confession.body, :length => 200)) %>
         <% unless confession.featured? %>
           <div class="action">
-            <%= link_to "Redigera", edit_confession_path(confession), :class => "button button--orange" %>
+            <%= link_to 'Redigera',
+                        edit_confession_path(confession),
+                        class: 'button button--orange',
+                        data: {
+                          created_at: confession.created_at,
+                          remaining_time: confession.remaining_time
+                        } %>
           </div>
         <% end %>
       </div>
