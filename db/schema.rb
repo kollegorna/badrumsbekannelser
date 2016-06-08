@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160602060059) do
+ActiveRecord::Schema.define(version: 20160608120425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,11 +70,12 @@ ActiveRecord::Schema.define(version: 20160602060059) do
   add_index "comments", ["confession_id"], name: "index_comments_on_confession_id", using: :btree
 
   create_table "confessions", id: :uuid, default: "uuid_generate_v4()", force: :cascade do |t|
-    t.uuid     "user_id",    null: false
-    t.text     "body",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.uuid     "user_id",      null: false
+    t.text     "body",         null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.text     "excerpt"
+    t.datetime "published_at"
   end
 
   add_index "confessions", ["user_id"], name: "index_confessions_on_user_id", using: :btree

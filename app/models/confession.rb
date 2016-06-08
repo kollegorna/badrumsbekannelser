@@ -10,6 +10,8 @@ class Confession < ActiveRecord::Base
 
   after_commit :update_mirrors!
 
+  scope :published, -> { where('published_at < ?', Time.zone.now) }
+
   def update_mirrors!
     family.mirrors.each do |mirror|
       UpdateMirrorJob.perform_later(mirror.id)
@@ -18,5 +20,25 @@ class Confession < ActiveRecord::Base
 
   def featured?
     cell.present? ? true : false
+  end
+
+  def published
+    if published_at.present?
+      return published_at < Time.zone.now
+    end
+
+    false
+  end
+
+  def published=(boolean)
+    if ActiveRecord::Type::Boolean.new.type_cast_from_user(boolean)
+      self.published_at = Time.zone.now
+    else
+      self.published_at = nil
+    end
+  end
+
+  def published?
+    publish
   end
 end
