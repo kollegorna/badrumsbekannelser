@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  actions :index, :new, :show, :edit, :create, :update
+  actions :index, :new, :show, :edit, :create, :update, :destroy
 
   filter :username
   filter :family

@@ -8,7 +8,7 @@ class Confession < ActiveRecord::Base
 
   accepts_nested_attributes_for :comment, allow_destroy: true
 
-  after_commit :update_mirrors!
+  after_commit :update_mirrors!, on: [:create, :update]
 
   scope :published, -> { where('published_at < ?', Time.zone.now) }
 

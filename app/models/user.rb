@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
          strip_whitespace_keys: [:username]
 
   belongs_to :family, counter_cache: true
-  has_many :confessions
+  has_many :confessions, dependent: :destroy
 
   validates :first_name, :last_name, :family, :alias, :birthdate, presence: true
   validates :username, length: { minimum: 4 }, uniqueness: true, presence: true
