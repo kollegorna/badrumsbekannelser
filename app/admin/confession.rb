@@ -4,7 +4,9 @@ ActiveAdmin.register Confession do
   filter :body
   filter :created_at
 
-  permit_params :excerpt,
+  scope :published
+
+  permit_params :excerpt, :published,
                 comment_attributes: [:id, :title, :body, :_destroy]
 
   config.sort_order = 'created_at_desc'
@@ -44,6 +46,7 @@ ActiveAdmin.register Confession do
       f.input :user, input_html: { disabled: true }
       f.input :body, input_html: { disabled: true }
       f.input :excerpt
+      f.input :published, as: :boolean
     end
 
     f.inputs 'Comment', for: [:comment, f.object.comment || Comment.new] do |c|
