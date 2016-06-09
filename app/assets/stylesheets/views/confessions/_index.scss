@@ -98,6 +98,7 @@
 
       .action {
         margin-top: 20px;
+        position: relative;
 
         @include media($tablet) {
           text-align: right;
@@ -107,6 +108,75 @@
 
           .button:not(:last-child) {
             margin-bottom: 10px;
+          }
+        }
+
+        .button {
+          position: relative;
+
+          .timer {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(black, 0.3);
+            z-index: 0;
+            border-radius: 0 4px 4px 0;
+          }
+
+          span {
+            position: relative;
+            z-index: 1;
+          }
+
+          .info {
+            display: none;
+            padding: 10px 15px;
+            text-align: center;
+            color: black;
+            font-family: $ds-font-family-complementary;
+            font-size: rem(14);
+            position: absolute;
+            top: 50%;
+            left: 110%;
+            white-space: nowrap;
+            background: white;
+            @include transform(translate(0, -50%));
+            border-radius: 4px;
+
+            &:after {
+              right: 100%;
+            	top: 50%;
+            	border: solid transparent;
+            	content: " ";
+            	height: 0;
+            	width: 0;
+            	position: absolute;
+            	pointer-events: none;
+            	border-color: rgba(255, 255, 255, 0);
+            	border-right-color: #FFFFFF;
+            	border-width: 4px;
+            	margin-top: -4px;
+            }
+
+            @include media($tablet) {
+              padding: 15px 20px;
+              left: auto;
+              right: 110%;
+
+              &:after {
+                right: auto;
+              	left: 100%;
+              	pointer-events: none;
+              	border-color: rgba(255, 255, 255, 0);
+              	border-left-color: #FFFFFF;
+              }
+            }
+          }
+
+          &:hover {
+            .info { display: block; }
           }
         }
       }

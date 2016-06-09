@@ -18,15 +18,22 @@
       <div class="content">
         <%= simple_format(truncate(confession.body, :length => 200)) %>
         <% unless confession.featured? %>
-          <div class="action">
-            <%= link_to 'Redigera',
-                        edit_confession_path(confession),
-                        class: 'button button--orange',
-                        data: {
-                          created_at: confession.created_at,
-                          remaining_time: confession.remaining_time
-                        } %>
-          </div>
+          <% if confession.remaining_time > 0 %>
+            <div class="action">
+              <%= link_to edit_confession_path(confession),
+                          class: 'button button--orange button--confession-edit',
+                          data: {
+                            created_at: confession.created_at,
+                            remaining_time: confession.remaining_time
+                          } do %>
+                <span>Redigera</span>
+                <div class="timer"></div>
+                <div class="info">
+                  <time>30</time> minutes left to edit
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </article>
