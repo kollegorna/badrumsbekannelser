@@ -20,7 +20,7 @@ var cardInterval, cardFlip;
 
 cardInterval = function(card, delay) {
   setTimeout(cardFlip, delay, card);
-  delay += (cardDuration + Math.round(Math.random()*10)) * 1000;
+  delay += (cardDuration + Math.round(Math.random()*5)) * 1000;
   setTimeout(cardFlip, delay, card);
 }
 

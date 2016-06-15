@@ -24,8 +24,13 @@
   &.blank {
     display: none;
 
-    @include media($desktop) {
+    @include media($tablet) {
       display: block;
+      width: percentage(1/4);
+      padding-bottom: percentage(1/4);
+    }
+
+    @include media($desktop) {
       width: percentage(1/7);
       padding-bottom: percentage(1/7);
     }
@@ -33,14 +38,15 @@
 
   &.link,
   &.photo,
-  &.action,
   &.confession {
-    width: 80%;
+    width: 100%;
     padding-bottom: 50%;
+    min-height: 180px;
 
     @include media($tablet) {
-        width: 40%;
-        padding-bottom: 30%;
+      min-height: 0;
+        width: percentage(1/4);
+        padding-bottom: percentage(1/4);
     }
 
     @include media($desktop) {
@@ -82,6 +88,7 @@
       .front { @include transform(perspective(600px) rotateY(180deg)); }
       .back { @include transform(perspective(600px) rotateY(0deg)); }
     }
+    &:hover { z-index: 3; }
   }
 
   &.link {
@@ -99,26 +106,129 @@
     width: 100%;
     padding-bottom: 50%;
     color: color("dark-gray");
+    display: none;
+
+    &.headline--mobile {
+      display: block;
+      width: 100%;
+      padding: 40px 0 0 0;
+      height: auto;
+
+      .content {
+        position: static;
+        margin: 0 auto;
+        @include transform(translate(0, 0));
+      }
+    }
+
+    &.headline--tablet {
+      width: 100%;
+      padding: 60px 0 0 0;
+      height: auto;
+
+      .content {
+        position: static;
+        margin: 0 auto;
+        @include transform(translate(0, 0));
+      }
+    }
+
+    h1 {
+      font-size: rem(38);
+      margin-bottom: 0;
+      line-height: 1;
+
+      @include media($tablet) {
+        font-size: rem(60);
+        margin-bottom: rem(4);
+      }
+      @include media($desktop) {
+        font-size: rem(48);
+        margin-bottom: rem(8);
+      }
+    }
 
     p {
       font-family: $ds-font-family-complementary;
+      font-weight: 400;
+      font-size: rem(16);
+      @include media($tablet) { font-size: rem(18); }
+      @include media($desktop) { font-size: rem(16); }
     }
 
     @include media($tablet) {
         padding-bottom: 30%;
+        &.headline--mobile { display: none; }
+        &.headline--tablet { display: block; }
     }
 
     @include media($desktop) {
       width: percentage(3/7);
       padding-bottom: percentage(1/7);
+      &.headline--tablet { display: none; }
+      &.headline--desktop { display: block; }
     }
   }
 
   &.action {
-    .play {
-      width: 80px;
-      height: 80px;
+    width: 100%;
+    height: auto;
+    display: none;
+
+    &.action--mobile {
+      display: block;
+      padding: 0 0 40px 0;
+    }
+
+    &.action--tablet {
+      padding: 0 0 60px 0;
+    }
+
+    @include media($tablet) {
+      &.action--mobile { display: none; }
+      &.action--tablet { display: block; }
+    }
+
+    @include media($desktop) {
+      &.action--tablet { display: none; }
+      &.action--desktop { display: block; }
+    }
+
+    .content {
+      position: static;
+      width: auto;
       margin: 0 auto;
+      @include transform(translate(0, 0));
+    }
+
+    @include media($tablet) {
+      height: auto;
+      width: 100%;
+    }
+
+    @include media($desktop) {
+      width: percentage(1/7);
+      padding-bottom: percentage(1/7);
+
+      .content {
+        display: block;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        @include transform(translate(-50%, -50%));
+      }
+    }
+
+    .play {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto;
+
+      @include media($desktop) {
+        width: 80px;
+        height: 80px;
+      }
 
       path {
         fill: color("green");
