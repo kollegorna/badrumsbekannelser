@@ -3,25 +3,55 @@
 <div class="grid">
 
   <% # Row 1 %>
-  <div class="cell empty"></div>
-  <div class="cell blank"></div>
-
   <div class="cell confession">
-    <div class="content">
-      <%= @cells[0]&.excerpt %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
     </div>
   </div>
 
-  <div class="cell empty"></div>
   <div class="cell blank"></div>
 
   <div class="cell confession">
-    <div class="content">
-      <%= @cells[1]&.excerpt %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
     </div>
   </div>
 
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell blank"></div>
+
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
 
   <% # Row 2 %>
   <%= link_to about_page_path, :class => "cell link" do %>
@@ -30,20 +60,39 @@
     </div>
   <% end %>
 
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
 
   <div class="cell headline">
     <div class="content">
       <h1>Badrumsbekännelser</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-        Mauris cursus nulla sed purus commodo.</p>
+      Mauris cursus nulla sed purus commodo.</p>
     </div>
   </div>
 
-  <div class="cell empty"></div>
   <div class="cell confession">
-    <div class="content">
-      <%= @cells[2]&.excerpt %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
     </div>
   </div>
 
@@ -51,29 +100,56 @@
   <div class="cell blank"></div>
 
   <div class="cell confession">
-    <div class="content">
-      <%= @cells[3]&.excerpt %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
     </div>
   </div>
 
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
 
   <a href="#" class="cell action open-video">
     <div class="content">
-        <div class="play">
-          <%= inline_svg "icons/play.svg" %>
-        </div>
-        <h2>Se filmen!</h2>
+      <div class="play">
+        <%= inline_svg "icons/play.svg" %>
+      </div>
+      <h2>Se filmen!</h2>
     </div>
   </a>
 
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
   <div class="cell blank"></div>
   <div class="cell photo" style="background-image: url('<%= image_path "face.png" %>');">
   </div>
 
   <% # Row 4 %>
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
   <div class="cell blank"></div>
 
   <%= link_to about_mirrors_page_path, :class => "cell link" do %>
@@ -82,12 +158,23 @@
     </div>
   <% end %>
 
-  <div class="cell empty"></div>
+  <div class="cell confession">
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
+    </div>
+  </div>
+
   <div class="cell blank"></div>
 
   <div class="cell confession">
-    <div class="content">
-      <%= @cells[4]&.excerpt %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[0]&.excerpt %>
+      </div>
     </div>
   </div>
 
