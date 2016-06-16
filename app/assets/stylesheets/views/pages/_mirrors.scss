@@ -4,6 +4,10 @@
 
 .mirrors {
 
+  .header {
+    svg #type path { fill: white; }
+  }
+
   // Override menu button colors
   .menu-toggle {
     .icon {

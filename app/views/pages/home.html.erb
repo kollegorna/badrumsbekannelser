@@ -17,35 +17,13 @@
     </div>
   </a>
 
-  <% # Row 1 %>
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[0]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 0 %>
 
   <div class="cell blank"></div>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[1]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 1 %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[2]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 2 %>
 
   <div class="cell headline headline--tablet">
     <div class="content">
@@ -64,41 +42,17 @@
 
   <div class="cell blank"></div>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[3]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 3 %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[4]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 4 %>
 
-
-  <% # Row 2 %>
   <%= link_to about_page_path, :class => "cell link" do %>
     <div class="content">
       Om projektet
     </div>
   <% end %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[5]&.excerpt %>
-      </div>
-    </div>
-  </div>
-
+  <%= render "cell", :cell_id => 5 %>
 
   <div class="cell headline headline--desktop">
     <div class="content">
@@ -108,45 +62,15 @@
     </div>
   </div>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[6]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 6 %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[7]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 7 %>
 
-  <% # Row 3 %>
   <div class="cell blank"></div>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[8]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 8 %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[9]&.excerpt %>
-      </div>
-    </div>
-  </div>
-
+  <%= render "cell", :cell_id => 9 %>
 
   <a href="#" class="cell action action--desktop open-video">
     <div class="content">
@@ -157,28 +81,14 @@
     </div>
   </a>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[10]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 10 %>
 
   <div class="cell blank"></div>
+
   <div class="cell photo" style="background-image: url('<%= image_path "face.png" %>');">
   </div>
 
-  <% # Row 4 %>
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[11]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 11 %>
 
   <div class="cell blank"></div>
 
@@ -188,25 +98,11 @@
     </div>
   <% end %>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[12]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 12 %>
 
   <div class="cell blank"></div>
 
-  <div class="cell confession">
-    <div class="front"></div>
-    <div class="back">
-      <div class="content">
-        <%= @cells[13]&.excerpt %>
-      </div>
-    </div>
-  </div>
+  <%= render "cell", :cell_id => 13 %>
 
   <div class="cell blank"></div>
 </div>
