@@ -4,6 +4,6 @@ class PagesController < ApplicationController
   end
 
   def all_confessions
-    @confessions = Confession.all.order(created_at: :desc)
+    @confessions = Confession.published.order(created_at: :desc)
   end
 end
