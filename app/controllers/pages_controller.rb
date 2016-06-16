@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @cells = Cell.order(position: :asc)
+    @cells = Cell.order("RANDOM()")
   end
 
   def all_confessions
