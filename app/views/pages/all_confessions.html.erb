@@ -1,0 +1,12 @@
+<% content_for :body_classes, "all-confessions" %>
+
+<section class="all-confessions__container">
+  <main class="all-confessions__main">
+    <h2>Här hittar du alla bekännelser</h2>
+    <ul>
+    <% @confessions.each do |confession| %>
+      <li><%= link_to '"' + truncate(confession.body, :length => 400) + '"', confession_path(confession) %></li>
+    <% end %>
+    </ul>
+  </main>
+</section>
