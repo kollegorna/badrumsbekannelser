@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'mirrors/show'
-
-  get 'families/mirror'
-
   devise_for :users, path: '', path_names: { sign_in: 'logga-in', sign_out: 'logga-ut'}
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -18,7 +14,7 @@ Rails.application.routes.draw do
 
   # Resources
 
-  resources :confessions
+  resources :confessions, path: 'bekannelser'
   resources :mirrors, only: [:show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
