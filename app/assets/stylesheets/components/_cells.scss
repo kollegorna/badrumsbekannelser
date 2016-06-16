@@ -117,6 +117,7 @@
       .content {
         position: static;
         margin: 0 auto;
+        width: 90%;
         @include transform(translate(0, 0));
       }
     }
@@ -134,8 +135,8 @@
     }
 
     h1 {
-      font-size: rem(38);
-      margin-bottom: 0;
+      font-size: rem(30);
+      margin-bottom: 5px;
       line-height: 1;
 
       @include media($tablet) {
@@ -151,7 +152,7 @@
     p {
       font-family: $ds-font-family-complementary;
       font-weight: 400;
-      font-size: rem(16);
+      font-size: rem(14);
       @include media($tablet) { font-size: rem(18); }
       @include media($desktop) { font-size: rem(16); }
     }
