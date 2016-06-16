@@ -1,0 +1,13 @@
+<% if(@cells[cell_id].present?) %>
+  <%= link_to confession_path(@cells[cell_id].confession_id), :class => "cell confession" do %>
+    <div class="front"></div>
+    <div class="back">
+      <div class="content">
+        <%= @cells[cell_id]&.excerpt %>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <div class="cell blank">
+  </div>
+<% end %>

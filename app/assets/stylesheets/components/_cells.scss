@@ -37,6 +37,7 @@
   }
 
   &.link,
+  &.empty,
   &.photo,
   &.confession {
     width: 100%;
@@ -57,7 +58,6 @@
 
   &.confession {
     font-size: rem(20);
-    cursor: pointer;
     z-index: 2;
 
     .front,
