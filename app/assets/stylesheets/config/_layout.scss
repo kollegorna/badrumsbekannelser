@@ -22,6 +22,6 @@ $ds-tooltips: 9;
 $huge: new-breakpoint(min-width 1600px 12);
 $desktop: new-breakpoint(min-width 1200px 12);
 $laptop: new-breakpoint(min-width 1024px 12);
-$tablet: new-breakpoint(min-width 768px 12);
+$tablet: new-breakpoint(min-width 737px 12);
 $mobile: new-breakpoint(min-width 480px 12);
 $mobile-only: new-breakpoint(max-width 768px 12);

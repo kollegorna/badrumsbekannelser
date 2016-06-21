@@ -11,6 +11,9 @@
   font-size: rem(20);
   line-height: 1.2;
   font-weight: 400;
+  margin-bottom: 2px;
+
+  @include media($tablet) { margin-bottom: 0; }
 
   .content {
     display: block;
@@ -41,7 +44,6 @@
   &.photo,
   &.confession {
     width: 100%;
-    padding-bottom: 50%;
     min-height: 180px;
 
     @include media($tablet) {
@@ -76,11 +78,13 @@
     }
     .front {
       background: color("light-green");
-      @include transform(perspective(600px) rotateY(0deg));
+      @include transform(perspective(600px) rotateY(180deg));
+      @include media($tablet) { @include transform(perspective(600px) rotateY(0deg)); }
     }
     .back {
       background: color("green");
-      @include transform(perspective(600px) rotateY(-180deg));
+      @include transform(perspective(600px) rotateY(0deg));
+      @include media($tablet) { @include transform(perspective(600px) rotateY(-180deg)); }
     }
 
     &.open,
@@ -178,7 +182,7 @@
 
     &.action--mobile {
       display: block;
-      padding: 0 0 40px 0;
+      padding: 0 0 100px 0;
     }
 
     &.action--tablet {
