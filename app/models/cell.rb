@@ -3,8 +3,8 @@ class Cell < ActiveRecord::Base
 
   belongs_to :confession
 
-  delegate :excerpt, :body, :published_at, to: :confession
+  delegate :excerpt, :body, :published_at, :comment, to: :confession
 
   validates :confession, presence: true, uniqueness: true
-  validates :excerpt, :published_at, presence: true
+  validates :excerpt, :published_at, :comment, presence: true
 end
