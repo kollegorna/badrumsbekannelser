@@ -11,6 +11,11 @@ addBinders = function() {
   });
 
   $('.open-video').on('click', function() {
+    $('body').removeClass('open-menu');
+    $('.navigation').fadeOut();
+    $('.video').fadeIn();
+
+    /* FIX TO MAKE VIDEO AUTOPLAY (DISABLED)
     var embedSrc = $('.video iframe').attr('src');
     if(embedSrc) {
       embedSrc = embedSrc.split("?");
@@ -21,7 +26,7 @@ addBinders = function() {
       $('body').removeClass('open-menu');
       $('.navigation').fadeOut();
       $('.video').fadeIn();
-    }
+    } */
   });
 
   $('.close-video').on('click', function() {
