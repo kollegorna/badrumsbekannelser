@@ -5,7 +5,7 @@
     <h2>Här hittar du alla bekännelser</h2>
     <ul>
     <% @confessions.each do |confession| %>
-      <li><%= link_to '"' + truncate(confession.body, :length => 400) + '"', confession_path(confession) %></li>
+      <li><%= link_to raw('&ldquo;') + truncate(confession.body, :length => 400) + raw('&rdquo;'), confession_path(confession) %></li>
     <% end %>
     </ul>
   </main>
