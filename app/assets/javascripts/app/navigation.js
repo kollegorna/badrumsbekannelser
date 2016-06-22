@@ -10,7 +10,8 @@ addBinders = function() {
     $('.navigation').fadeToggle();
   });
 
-  $('.open-video').on('click', function() {
+  $('.open-video').on('click', function(e) {
+    e.preventDefault();
     $('body').removeClass('open-menu');
     $('.navigation').fadeOut();
     $('.video').fadeIn();
