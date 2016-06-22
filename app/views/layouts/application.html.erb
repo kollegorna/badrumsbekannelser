@@ -5,18 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>
-    <%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelser' : 'Badrumsbekännelser' %>
+    <%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelser' : 'Badrumsbekännelser – Ett initiativ av Dina Försäkringar som ska hjälpa oss att öppna upp oss mer för varandra i hemmet' %>
   </title>
 
-  <meta name="description" content="<%= yield(:description).presence || "@TODO" %>">
+  <meta name="description" content="<%= yield(:description).presence || "Ibland är det lättare att säga vad man tänker när man delar sina #Badrumsbekännelser med en magisk spegel." %>">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelser' : 'Badrumsbekännelser' %>">
+  <meta property="og:title" content="Tänk om en spegel kunde berätta vad den ser varje dag?">
   <meta property="og:url" content="<%= request.original_url %>">
-  <meta property="og:description" content="<%= yield(:description).presence || "@TODO" %>">
+  <meta property="og:description" content="#Badrumsbekännelser är ett initiativ för att vi ska öppna upp oss mer för varandra i hemmet, gör det du med!">
   <meta property="og:image" content="<%= image_url "social/facebook_og.png" %>">
   <meta property="og:locale" content="sv_SE">
   <meta property="og:site_name" content="Badrumsbekännelser">
@@ -24,7 +24,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) + ' | Badrumsbekännelser' : 'Badrumsbekännelser' %>">
-  <meta name="twitter:description" content="<%= yield(:description).presence || "@TODO" %>">
+  <meta name="twitter:description" content="Vad händer med våra relationer när vi delar våra #Badrumsbekännelser med en magisk spegel? Se själv!">
   <meta name="twitter:image" content="<%= image_url "social/twitter_card.png" %>">
 
   <script type="text/javascript" src="//fast.fonts.net/jsapi/fadc5a03-3584-47ac-8dbe-4551a7d46774.js"></script>

@@ -3,7 +3,7 @@
 <section class="mirrors__hero" style="background-image: url('<%= image_path "mirror.jpg" %>');">
   <div class="hero__container">
     <div class="hero__content">
-      <h1>Badrumsbekännelsen — ett nytt initiativ av Dina Försäkringar för att visa...</h1>
+      <h1>Bygg din egna magiska spegel för underlätta dialogen på hemmaplan</h1>
     </div>
   </div>
 </section>
@@ -12,14 +12,12 @@
   <aside class="mirrors__sidebar">
     <h2>Detta använde vi:</h2>
     <ul>
-      <li>En datorskärm</li>
-      <li>Glas med spionplast</li>
-      <li>HDMI-kabel</li>
       <li>Raspberry Pi 3</li>
-      <li>PiNoir kamera</li>
-      <li>Strömförsörjning</li>
-      <li>8gb Micro SD med SD-adapter</li>
-      <li>osv...</li>
+      <li>Asus Vn247h 23,6 bildskärm</li>
+      <li>HDMI-kabel </li>
+      <li>8 GB Micro SD med SD-adapter</li>
+      <li>Raspbian</li>
+      <li>Chromium Browser</li>
     </ul>
 
     <a class="button button--orange">Ladda hem koden</a>
@@ -28,16 +26,13 @@
   </aside>
 
   <main class="mirrors__main">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sapien turpis, dapibus eget dignissim id, maximus eget erat. Sed pharetra leo a mi efficitur scelerisque. Nulla facilisi. Phasellus vel arcu pellentesque, rhoncus purus auctor, convallis risus. In mollis risus turpis, non sollicitudin lacus ornare et.</p>
+    <p>Att bygga en egen magisk spegel kräver ett visst mått av fokus och tålmodighet men är inte alls svårt. Känner du att din familj skulle må bra av lite hjälp på traven i er vardagsdialog kan det vara en god idé att göra den magiska spegeln till ett sommarprojekt för hela familjen. </p>
 
-    <p>Nunc semper felis in nulla ornare, laoreet elementum sem cursus. Donec elit lorem, iaculis at lobortis nec, tincidunt sed nisl. Vestibulum at posuere ante. Nunc at diam eu diam eleifend lacinia. Praesent dictum eros urna, id facilisis lorem lobortis sit amet. Sed at fringilla arcu. Ut ut libero eget justo porta sodales.</p>
+    <h3>Så här byggde vi spegeln</h3>
+    <p>Spegeln är designad så att den står plant lutad mot en vägg med ett vinklat stativ. Själva möbeln består av ett hölje i MDF som innesluter skärmen, Raspberry Pi:en och alla kablar. Framtill limmas en spegel (en så kallad spionspegel eller 2-way mirror) fast på en ramlös konstruktion. Stativet till spegelenheten är svetsad i fyrkantsrör i stål (25x15mm). Stativet har gummifötter för att öka friktionen mot golvet. Hela möbeln är vitlackerad. Ut ur spegeln går en 5 meter lång kabel som pluggas in i Raspberry Pi:en. På baksidan gör du ett fingerstort hål så att du enkelt kan komma åt att starta skärmen. Det går också att välja en alternativ placering och fästa spegeln på väggen genom att skruva fast gavlar.</p>
 
-    <h3>Så byggde vi speglarna</h3>
-    <p>Sed a diam eget nisl vulputate suscipit. Cras pretium vitae nisl quis maximus. Ut et libero magna. Etiam vel lacus quam. Proin porta ut odio mattis mattis. Aenean sed elit ligula. In ex metus, sodales id hendrerit in, luctus quis diam. Vivamus elit leo, scelerisque sed lectus ut, vulputate convallis neque.</p>
+    <h3>Så här gör du spegeln magisk</h3>
 
-    <p>Quisque a nibh accumsan, dapibus metus at, pulvinar dolor. Donec condimentum tortor quis eleifend tempus. Ut at semper nisi. Nunc id ex non tortor aliquet imperdiet vitae sed nunc. Vestibulum dui diam, varius nec mollis sit amet, vestibulum et orci. Donec aliquam efficitur felis. Sed et ex placerat, rutrum nulla ut, gravida justo.</p>
-
-    <h3>Så bygger du din egen spegel</h3>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc elementum ipsum a sapien tincidunt cursus. Etiam dapibus vitae risus iaculis sodales. Nullam turpis quam, molestie vitae finibus vitae, dictum a nibh. Sed sed felis et lacus porta vestibulum commodo quis felis. Integer non leo laoreet, tempus mauris vitae, ullamcorper magna. Nunc bibendum imperdiet porta.</p>
+    <p>Bakom varje spegel sitter en Raspberry PI 3 och en bildskärm. På Raspberry Pi:en kör vi Raspbian som vi gjort ett gäng anpassningar med för att fungera väl i speglarna. Som webbläsare används Chromium Browser. Lösningen för spegelns webbsida, adminverktyget samt denna webbplats är gjord med Ruby on Rails. Vi använder Pusher för att uppdatera speglarna i realtid. Allt driftas på Heroku med CloudFlare framför som CDN. Postgres och Redis används för att lagra respektive cacha data.</p>
   </main>
 </section>
