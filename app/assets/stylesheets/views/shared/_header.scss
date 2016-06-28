@@ -14,12 +14,6 @@
     svg {
       width: auto;
       height: 45px;
-
-      #type { display: none; }
-
-      @include media($tablet) {
-        #type { display: block; }
-      }
     }
   }
 
