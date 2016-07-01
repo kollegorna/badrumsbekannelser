@@ -1,5 +1,6 @@
 class MirrorsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
+  skip_before_action :basic_auth, only: [:show]
 
   layout 'mirror'
 
