@@ -46,7 +46,7 @@ ActiveAdmin.register Confession do
       f.input :user, input_html: { disabled: true }
       f.input :body, input_html: { disabled: true }
       f.input :excerpt
-      f.input :published, as: :boolean
+      f.input :published, as: :boolean, hint: 'Excerpt och Comment måste vara ifylld för att kunna publicera.'
     end
 
     f.inputs 'Comment', for: [:comment, f.object.comment || Comment.new] do |c|

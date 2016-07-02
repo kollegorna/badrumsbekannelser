@@ -5,6 +5,7 @@ class Confession < ActiveRecord::Base
   has_one :cell, dependent: :destroy
 
   validates :user, :body, presence: true
+  validates :excerpt, :comment, presence: true, if: :published?
 
   accepts_nested_attributes_for :comment, allow_destroy: true
 
