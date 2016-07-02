@@ -38,6 +38,9 @@ source 'https://rubygems.org' do
   group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
     gem 'byebug'
+    gem 'capybara', '~> 2.7.1'
+    gem 'faker', '~> 1.6.3'
+    gem 'factory_girl_rails', '~> 4.7.0'
     gem 'rspec-rails', '~> 3.4.2'
     gem 'better_errors'
     gem 'faker', '~> 1.6.3'
