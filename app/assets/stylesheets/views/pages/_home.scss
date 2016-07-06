@@ -15,6 +15,12 @@
     a.confession {
       color: white;
       &:hover { color: white; }
+
+      &:nth-child(odd) { display: none; }
+
+      @include media($tablet) {
+        &:nth-child(odd) { display: block; }
+      }
     }
   }
 }
