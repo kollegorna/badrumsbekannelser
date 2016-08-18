@@ -1,5 +1,6 @@
 // Styles for the mirrors
 @import 'config/fonts';
+@import "animate.css/animate.css";
 
 *,
 *:before,
@@ -40,9 +41,29 @@ body {
         margin: 0;
       }
     }
+
+    span {
+      display: inline-block;
+      backface-visibility: hidden;
+      animation: fadeInUp .6s forwards;
+      min-width: 16px;
+      opacity: 0;
+    }
+
+    .out span {
+      animation: fadeOutUp .6s forwards;
+      opacity: 1;
+    }
+
+    @for $item from 1 through 1000 {
+      span:nth-of-type(#{$item}){
+        animation-delay: #{($item/10)}s;
+      }
+    }
   }
 
   .info {
+    animation: fadeIn 3s forwards;
     font-size: 4vw;
     margin: 16vw 0;
   }

@@ -6,4 +6,14 @@ module ApplicationHelper
   def description(page_description)
     content_for(:description) { page_description }
   end
+
+  def wrap_in_span(text)
+    wrapped_text = []
+
+    text.each_char do |c|
+      wrapped_text << "<span>#{c}</span>"
+    end
+
+    return wrapped_text.join
+  end
 end
