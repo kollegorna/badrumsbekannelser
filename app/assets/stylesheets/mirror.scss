@@ -45,14 +45,63 @@ body {
     span {
       display: inline-block;
       backface-visibility: hidden;
-      animation: fadeInUp .6s forwards;
       min-width: 16px;
+      text-shadow: 0 0 0 whitesmoke;
+      animation: smoky 5s both;
+      
+      transform:
+        translate3d(-15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
+        scale(1.5);
+      text-shadow: 0 0 20px whitesmoke;
+      opacity: 0;
+      color: transparent;
+    }
+
+    span:nth-child(even){
+      animation-name: smoky-mirror;
+      transform:
+        translate3d(-18rem,-8rem,0)
+        rotate(-40deg) 
+        skewX(-70deg)
+        scale(2);
+      text-shadow: 0 0 20px whitesmoke;
       opacity: 0;
     }
 
-    .out span {
-      animation: fadeOutUp .6s forwards;
-      opacity: 1;
+    @keyframes smoky {
+      40% {
+        color: transparent;
+        text-shadow: 0 0 40px whitesmoke;
+      }
+      to {
+        transform:
+          translate3d(0,0,0)
+          rotate(0)
+          skewX(0)
+          scale(1);
+        text-shadow: 0 0 0 whitesmoke;
+        opacity: 1;
+        color: white;
+      }
+    }
+
+    @keyframes smoky-mirror {
+      50% {
+        color: transparent;
+        text-shadow: 0 0 40px whitesmoke;
+      }
+      to {
+        transform:
+          translate3d(0,0,0)
+          rotate(0) 
+          skewX(0)
+          scale(1);
+        text-shadow: 0 0 0 whitesmoke;
+        opacity: 1;
+        color: white;
+      }
     }
 
     @for $item from 1 through 1000 {

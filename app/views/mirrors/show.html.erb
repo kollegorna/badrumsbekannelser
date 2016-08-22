@@ -5,11 +5,6 @@
 <script data-turbolinks-eval=false>
   var channel = pusher.subscribe('<%= @mirror.id %>');
   channel.bind("update", function(data) {
-    $('.confession > div').addClass('out');
-
-    var animationLength = 600;
-    var timeoutTime = $('.confession > div > span').length * animationLength;
-
     setTimeout(function() {
       Turbolinks.visit(location.toString());
     }, timeoutTime);
