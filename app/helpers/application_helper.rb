@@ -8,6 +8,8 @@ module ApplicationHelper
   end
 
   def wrap_in_span(text)
+    text = EmojiParser.detokenize(text.gsub(EmojiParser.emoticon_regex) {|match| ":#{EmojiParser.emoticons[match]}:" })
+
     wrapped_text = []
 
     text.each_char do |c|
