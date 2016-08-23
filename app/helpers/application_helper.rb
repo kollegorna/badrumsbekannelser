@@ -7,33 +7,23 @@ module ApplicationHelper
     content_for(:description) { page_description }
   end
 
-#  def wrap_in_span(text)
-#    text = EmojiParser.detokenize(text.gsub(EmojiParser.emoticon_regex) {|match| ":#{EmojiParser.emoticons[match]}:" })
-#
-#    wrapped_text = []
-#
-#    text.each_char do |c|
-#      wrapped_text << "<span>#{c}</span>"
-#    end
-#
-#    return wrapped_text.join
-#  end
-
   def wrap_in_span(text)
     text = EmojiParser.detokenize(text.gsub(EmojiParser.emoticon_regex) {|match| ":#{EmojiParser.emoticons[match]}:" })
 
     wrapped_text = []
-    wrapped_word = []
 
-    text.each_char do |c|
-      if c.match(/\s+/)
-        wrapped_text << "<span class='word'>#{wrapped_word.join}</span> "
+    text.split(' ').each do |word|
+      wrapped_text << content_tag(:span, class: 'word') do
         wrapped_word = []
-      else
-        wrapped_word << "<span class='letter'>#{c}</span>"
+
+        word.each_char do |char|
+          wrapped_word << content_tag(:span, char, class: 'letter')
+        end
+
+        wrapped_word.join.html_safe
       end
     end
 
-    return wrapped_text.join
+    wrapped_text.join(' ')
   end
 end
