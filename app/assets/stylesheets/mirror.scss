@@ -33,12 +33,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-    @media screen and (max-width: 530px) {
-      width: 315px;
-      margin: 0 auto;
-    }
 
     p {
       margin: 0 0 15px;
@@ -48,14 +42,15 @@ body {
       }
     }
     
-//    .word {
-//      display: inline-block;
-//    }
+    .word {
+      display: inline-block;
+      margin: 0 2px;
+    }
 
-    span {
+    span.letter {
       display: inline-block;
       backface-visibility: hidden;
-      min-width: 16px;
+      min-width: 10px;
       text-shadow: 0 0 0 whitesmoke;
       animation: smoky 5s both;
       
@@ -69,7 +64,7 @@ body {
       color: transparent;
     }
 
-    span:nth-child(even){
+    span.letter:nth-child(even){
       animation-name: smoky-mirror;
       transform:
         translate3d(-18rem,-8rem,0)
