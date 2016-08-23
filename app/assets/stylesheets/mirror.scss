@@ -33,6 +33,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
+    @media screen and (max-width: 530px) {
+      width: 315px;
+      margin: 0 auto;
+    }
 
     p {
       margin: 0 0 15px;
@@ -41,6 +47,10 @@ body {
         margin: 0;
       }
     }
+    
+//    .word {
+//      display: inline-block;
+//    }
 
     span {
       display: inline-block;
