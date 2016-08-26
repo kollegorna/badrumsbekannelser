@@ -1,6 +1,17 @@
 // Styles for the mirrors
 @import 'config/fonts';
-@import 'animate.css/animate';
+//@import 'animate.css/animate';
+@import "bourbon/app/assets/stylesheets/bourbon";
+
+//Colors
+$white: white;
+$black: black;
+$red: #ba2229;
+$green: #35aa11;
+//$gray-white: #ebebeb;
+//$gray-light: #d0d0d0;
+//$gray-dark: #333333;
+$gray: #b1b1b1;
 
 *,
 *:before,
@@ -120,5 +131,44 @@ body {
     animation: fadeIn 3s forwards;
     font-size: 4vw;
     margin: 16vw 0;
+  }
+
+  .messages {
+    list-style: none;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    text-align: left;
+//    @include transform(translate(0, -120%));
+    box-shadow: rgba($gray, .1) 0px -5px 20px;
+    @include transition(transform 0.5s ease-in-out 0s);
+    
+    &.show {
+      @include transform(translate(0, 0));
+    }
+
+    li {
+      width: 100%;
+      padding: 10px 20px;
+      font-weight: 400;
+      font-size: 0.875rem;
+      font-family: Helvetice, Arial, sans-serif;
+      text-align: center;
+//      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: $gray;
+
+      &.notice { background: rgba($green, .8); color: $white; }
+      &.alert { background: rgba($red, .8); color: $white; }
+    }
+  }
+  @include keyframes(show_messages) {
+    from { @include transform(translate(0, -120%)); }
+    to { @include transform(translate(0, 0)); }
   }
 }

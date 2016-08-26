@@ -2,3 +2,65 @@ var pusher = new Pusher('<%= Pusher.key %>', {
   cluster: 'eu',
   encrypted: true
 });
+
+var wasConnectedBefore = false;
+var wasConnectingBefore = false;
+
+var mirrorMessages = {
+  connecting   : "Hold on, we're trying to connect...",
+  connected    : "Woohoo! You're connected!",
+  disconnected : "Mmm... seems you're disconnected :(",
+  unavailable  : "We were unable to connect, reebot it!",
+  failed       : "Failed :("
+}
+
+pusher.connection.bind('connecting', function() {
+  if (wasConnectingBefore) {
+    $('.mirror .messages').removeClass('show');
+    setTimeout(function() {
+      $('.mirror .messages li').removeClass().addClass('notice');
+      $('.mirror .messages li').html(mirrorMessages.connecting);
+      $('.mirror .messages').addClass('show');
+    }, 500);
+  }
+  wasConnectingBefore = true;
+});
+pusher.connection.bind('connected', function() {
+  if (wasConnectedBefore) {
+    $('.mirror .messages').removeClass('show');
+    setTimeout(function() {
+      $('.mirror .messages li').removeClass().addClass('notice');
+      $('.mirror .messages li').html(mirrorMessages.connected);
+      $('.mirror .messages').addClass('show');
+      setTimeout(function() {
+        $('.mirror .messages').removeClass('show');
+      }, 5000);
+    }, 1000);
+  }
+  wasConnectedBefore = true;
+});
+
+pusher.connection.bind('disconnected', function() {
+  $('.mirror .messages').removeClass('show');
+  setTimeout(function() {
+    $('.mirror .messages li').removeClass().addClass('alert');
+    $('.mirror .messages li').html(mirrorMessages.disconnected);
+    $('.mirror .messages').addClass('show');
+  }, 500);
+});
+pusher.connection.bind('unavailable', function() {
+  $('.mirror .messages').removeClass('show');
+  setTimeout(function() {
+    $('.mirror .messages li').removeClass().addClass('alert');
+    $('.mirror .messages li').html(mirrorMessages.unavailable);
+    $('.mirror .messages').addClass('show');
+  }, 500);
+});
+pusher.connection.bind('failed', function() {
+  $('.mirror .messages').removeClass('show');
+  setTimeout(function() {
+    $('.mirror .messages li').removeClass().addClass('alert');
+    $('.mirror .messages li').html(mirrorMessages.failed);
+    $('.mirror .messages').addClass('show');
+  }, 500);
+});
