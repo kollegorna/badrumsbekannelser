@@ -8,9 +8,6 @@ $white: white;
 $black: black;
 $red: #ba2229;
 $green: #35aa11;
-//$gray-white: #ebebeb;
-//$gray-light: #d0d0d0;
-//$gray-dark: #333333;
 $gray: #b1b1b1;
 
 *,
@@ -58,82 +55,65 @@ body {
       margin: 0 2px;
     }
 
-//    span.letter {
-//      display: inline-block;
-//      backface-visibility: hidden;
-//      min-width: 10px;
-//      text-shadow: 0 0 0 whitesmoke;
-//      animation: smoky 5s both;
-//      
-//      transform:
-//        translate3d(-15rem,-8rem,0)
-//        rotate(-40deg)
-//        skewX(70deg)
-//        scale(1.5);
-//      text-shadow: 0 0 20px whitesmoke;
-//      opacity: 0;
-//      color: transparent;
-//    }
-//
-//    span.letter:nth-child(even){
-//      animation-name: smoky-mirror;
-//      transform:
-//        translate3d(-18rem,-8rem,0)
-//        rotate(-40deg) 
-//        skewX(-70deg)
-//        scale(2);
-//      text-shadow: 0 0 20px whitesmoke;
-//      opacity: 0;
-//    }
-
     span.letter {
       display: inline-block;
       backface-visibility: hidden;
       min-width: 10px;
-      animation: smoky 1s cubic-bezier(0.175, 0.885, 0.32, 1.05) both;
+      text-shadow: 0 0 0 whitesmoke;
+      animation: smoky 5s both;
       
       transform:
-        translate3d(0,-18rem,0)
+        translate3d(-15rem,-8rem,0)
+        rotate(-40deg)
+        skewX(70deg)
         scale(1.5);
+      text-shadow: 0 0 20px whitesmoke;
       opacity: 0;
-      color: white;
+      color: transparent;
     }
 
     span.letter:nth-child(even){
       animation-name: smoky-mirror;
       transform:
-        translate3d(0,18rem,0)
+        translate3d(-18rem,-8rem,0)
+        rotate(-40deg) 
+        skewX(-70deg)
         scale(2);
+      text-shadow: 0 0 20px whitesmoke;
       opacity: 0;
     }
 
     @keyframes smoky {
-      from {
-        transform:
-          translate3d(0,-18rem,0)
-          scale(2);
-        opacity: 0;
+      40% {
+        color: transparent;
+        text-shadow: 0 0 40px whitesmoke;
       }
       to {
         transform:
           translate3d(0,0,0)
+          rotate(0)
+          skewX(0)
           scale(1);
+        text-shadow: 0 0 0 whitesmoke;
         opacity: 1;
+        color: white;
       }
     }
 
     @keyframes smoky-mirror {
-      from {
-        transform:
-          translate3d(0,18rem,0)
-          scale(2);
-        opacity: 0;
+      50% {
+        color: transparent;
+        text-shadow: 0 0 40px whitesmoke;
       }
       to {
         transform:
           translate3d(0,0,0)
+          rotate(0) 
+          skewX(0)
           scale(1);
+        text-shadow: 0 0 0 whitesmoke;
         opacity: 1;
+        color: white;
       }
     }
 
@@ -161,6 +141,7 @@ body {
     padding: 0;
     z-index: 1;
     text-align: left;
+    @include transform(translate(0, -120%));
     box-shadow: rgba($gray, .1) 0px -5px 20px;
     @include transition(transform 0.5s ease-in-out 0s);
     
