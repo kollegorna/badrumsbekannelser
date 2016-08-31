@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :confessions, dependent: :destroy
 
   validates :first_name, :last_name, :family, :alias, :birthdate, presence: true
-  validates :username, length: { minimum: 4 }, uniqueness: true, presence: true
+  validates :username, length: { minimum: 3 }, uniqueness: true, presence: true
 
   def to_s
     name
