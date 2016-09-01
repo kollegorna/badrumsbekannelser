@@ -53,6 +53,16 @@ body {
     .word {
       display: inline-block;
       margin: 0 2px;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    
+    span {
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      will-change: transform, opacity, text-shadow;
     }
 
     span.letter {
