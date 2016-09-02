@@ -46,6 +46,10 @@
       padding: 200px 0;
     }
 
+    @include media($huge) {
+      padding: 300px 0;
+    }
+
     h1 {
       color: color("white");
     }
