@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   resources :confessions, path: 'bekannelser'
   resources :mirrors, only: [:show, :update]
 
+  get '/google659702c6cbecf183.html',
+    to: proc { |env| [200, {}, ["google-site-verification: google659702c6cbecf183.html"]] }
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
