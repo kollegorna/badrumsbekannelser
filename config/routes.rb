@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
   get 'om',                to: 'pages#about',            as: 'about_page'
   get 'speglarna',         to: 'pages#about_mirrors',    as: 'about_mirrors_page'
-  get 'psykolog',          to: 'pages#psychologist',     as: 'psychologist_page'
+  get 'relationsexpert',   to: 'pages#psychologist',     as: 'psychologist_page'
   get 'alla-bekannelser',  to: 'pages#all_confessions',  as: 'all_confessions_page'
+
+  get '/psykolog', to: redirect('/relationsexpert')
 
   # Resources
 
